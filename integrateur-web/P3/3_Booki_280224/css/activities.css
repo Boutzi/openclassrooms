@@ -9,21 +9,21 @@
 }
 
 .activities__cards {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 33px;
 }
 
 .activities__cards .card {
-  width: 300px;
+  height: 439px;
   transition: 0.3s ease;
+  margin-bottom: 15px;
 }
 
 .activities__cards .card img {
+  width: 100%;
   height: 380px;
-  width: 300px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -32,3 +32,4 @@
     margin:15px 0 15px 10px;
   }
   
+

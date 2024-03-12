@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./css/info.css" />
     <link rel="stylesheet" href="./css/activities.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/media.css" />
     <script src="https://kit.fontawesome.com/54f3183466.js" crossorigin="anonymous">
     </script>
     <script
@@ -41,7 +42,7 @@
           />
         </div>
         <ul class="header__main-nav">
-          <li><a class="main-nav__button">Hébergements</a></li>
+          <li><a class="main-nav__button ischecked">Hébergements</a></li>
           <li><a class="main-nav__button">Activités</a></li>
         </ul>
       </header>
@@ -53,10 +54,10 @@
             </section>
             <section class="info-group__section">
               <div class="section__location">
-                <form action="location__form">
+                <form class="location__form">
                     <div class="form__icon" ><i class="fa-solid fa-location-dot"></i></div>
                     <input type="text" value="" id="search-city" placeholder="">
-                    <button type="submit">Rechercher</button>
+                    <button type="submit"><span class="mobile"><i class="fa-solid fa-search"></i></span><span class="desktop">Rechercher</span></button>
                 </form>
               </div>
             </section>
@@ -358,19 +359,19 @@
           <div class="activities__cards">
             <div class="card">
               <img src="images/activites/reno-laithienne.jpg" alt="">
-              <h3>Notre-Dame-de-la-Garde</h3>
+              <h3>Vieux Port</h3>
             </div>
             <div class="card">
               <img src="images/activites/paul-hermann.jpg" alt="">
-              <h3>Parc national des Calanques</h3>
-            </div>
-            <div class="card">
-              <img src="images/activites/kilyan-sockalingum.jpg" alt="">
               <h3>Fort de Pomègues</h3>
             </div>
             <div class="card">
+              <img src="images/activites/kilyan-sockalingum.jpg" alt="">
+              <h3>Parc national des Calanques</h3>
+            </div>
+            <div class="card">
               <img src="images/activites/florian-wehde.jpg" alt="">
-              <h3>Vieux Port</h3>
+              <h3>Notre-Dame-de-la-Garde</h3>
             </div>
           </div>
         </section>

@@ -1,0 +1,38 @@
+@use "../abstracts/" as *;
+
+body {
+    font-family: $font-secondary;
+}
+
+@for $i from 1 through 3 {
+    h#{$i} {
+        font-family: nth($list: $font-primary $font-primary $font-secondary , $n: $i);
+        font-size: nth($list: $font-size-xxl $font-size-xl $font-size-l, $n: $i);
+        color: nth($list: $color-primary $color-secondary $color-tertiary, $n: $i);
+    }
+}
+
+a {
+    color: $color-primary;
+    &:hover {
+        color: $color-tertiary;
+    }
+    &:active {
+        color: $color-secondary;
+    }
+}
+
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 10px;
+    border:1px solid $color-canvas-inverted;
+  }
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid $color-selector;
+    border:1px solid transparent;
+}
+  button {
+    cursor: pointer;
+  }

@@ -39,3 +39,8 @@ header {
   cursor: pointer;
   border-top: 2px solid var(--main-color);
 }
+
+.ischecked {
+  color: var(--main-color);
+  border-top: 2px solid var(--main-color);
+}
