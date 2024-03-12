@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.view-restaurants {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} 

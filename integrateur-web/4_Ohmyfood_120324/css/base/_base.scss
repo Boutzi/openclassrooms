@@ -2,23 +2,15 @@
 
 body {
     font-family: $font-secondary;
+    background-color: $color-canvas;
 }
 
-@for $i from 1 through 3 {
+@for $i from 1 through 4 {
     h#{$i} {
-        font-family: nth($list: $font-primary $font-primary $font-secondary , $n: $i);
-        font-size: nth($list: $font-size-xxl $font-size-xl $font-size-l, $n: $i);
-        color: nth($list: $color-primary $color-secondary $color-tertiary, $n: $i);
-    }
-}
-
-a {
-    color: $color-primary;
-    &:hover {
-        color: $color-tertiary;
-    }
-    &:active {
-        color: $color-secondary;
+        font-family: nth($list: $font-primary $font-secondary $font-secondary $font-secondary , $n: $i);
+        font-size: nth($list: $font-size-xl $font-size-l $font-size-m $font-size-m, $n: $i);
+        font-weight: nth($list: 300 $font-weight-bold $font-weight-light $font-weight-bold, $n: $i);
+        color: nth($list: $color-text $color-pure-inverted $color-text-medium $color-pure-inverted, $n: $i);
     }
 }
 

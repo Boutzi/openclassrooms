@@ -4,27 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/54f3183466.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Oh My Food</title>
+    <title>Ohmyfood - Paris</title>
   </head>
   <body>
-    <header>
-      <h1>Hello World</h1>
-      <h2>This is a title h2</h2>
-      <h3>This is a title h3</h3>
-      <p>This is a paragraph</p>
-      <a href="#">This is a link</a>
+    <header class="header">
+      <div class="logo-content">
+        <a href="#">
+        <img
+          class="header__logo"
+          src="images/logo/ohmyfood@2x.svg"
+          alt="Ohmyfood
+          Logo"
+          />
+        </a>
+      </div>
+      <div class="location">
+        <div class="location__logo"><i class="fa-solid fa-location-dot"></i></div>
+        <p class="location__title">Paris, Belleville</p>
+      </div>
     </header>
-    <form>
-      <input type="text" value="" placeholder="Boutzi" />
-      <input type="email" value="" placeholder="joe@arkaans.com" />
-      <input type="password" value="" placeholder="**********" />
-      <textarea minlength="300"></textarea>
-      <select name="" id="">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-      <button type="submit">Envoyer</button>
-    </form>
+    <main>
+      <section class="section">
+        <div class="explore">
+        <h2 class="explore__title">Réservez le menu qui vous convient</h2>
+        <h3>
+          Découvrez des restaurants d’exception, sélectionnés par nos soins.
+        </h3 class="explore__subtitle">
+        <div class="btn btn--main">
+          <p class="btn-explore__title">Explorer nos restaurants</p>
+        </div>
+        </div>
+      </section>
+      <section class="section pure">
+        <div class="selection">
+        <h2 class="selection__title">Fonctionnement</h2>
+        <div class="selectors">
+        <div class="btn btn--selection">
+          <div class="btn__order">1</div>
+          <div class="btn__logo"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <p class="btn__title">Choisissez un restaurant</p>
+        </div>
+        <div class="btn btn--selection">
+          <div class="btn__order">2</div>
+          <div class="btn__logo"><i class="fa-solid fa-list-ul"></i></div>
+          <p class="btn__title">Composez votre menu</p>
+        </div>
+        <div class="btn btn--selection">
+          <div class="btn__order">3</div>
+          <div class="btn__logo btn__logo--colored"><i class="fa-solid fa-store"></i></div>
+          <p class="btn__title">Dégustez au restaurant</p>
+        </div>
+      </div>
+      </div>
+      </section> 
+      <section class="section">
+        <div class="selection">
+          <h2 class="selection__title">Restaurants</h2>
+          <div class="view-restaurants">
+            <div class="thumbnails">
+              <img class="thumbnails__picture" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+              <h4 class="thumbnails__title">La palette du goût</h4>
+              <p class="thumbnails__subtitle">Ménilmontant</p>
+              <div class="thumbnails__like-btn">
+                <img id="like_isUnchecked" src="images/assets/Vector.svg">
+              </div>
+            </div>
+            <div class="thumbnails">
+              <img class="thumbnails__picture thumbnails__picture--top-visible" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+              <h4 class="thumbnails__title">La note enchantée</h4>
+              <p class="thumbnails__subtitle">Charonne</p>
+              <div class="thumbnails__like-btn">
+                    <img id="like_isUnchecked" src="images/assets/Status=Liked.svg">
+              </div>
+            </div>
+            <div class="thumbnails">
+              <img class="thumbnails__picture" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+              <h4 class="thumbnails__title">À la française</h4>
+              <p class="thumbnails__subtitle">Cité Rouge</p>
+              <div class="thumbnails__like-btn">
+                    <img id="like_isUnchecked" src="images/assets/Vector.svg">
+              </div>
+            </div>
+            <div class="thumbnails">
+              <img class="thumbnails__picture" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+              <h4 class="thumbnails__title">Le délice des sens</h4>
+              <p class="thumbnails__subtitle">Folie-Méricourt</p>
+              <div class="thumbnails__like-btn">
+                    <img id="like_isUnchecked" src="images/assets/Vector.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-content__logo">ohmyfood</p>
+        <ul class="footer-menu">
+          <li><i class="fa-solid fa-utensils"></i><a class="footer-menu__link footer-menu__link--medium">Proposer un restaurant</a></li>
+          <li><i class="fa-solid fa-handshake-simple fa-solid--rotate"></i><a class="footer-menu__link footer-menu__link--medium">Devenir partenaire</a></li>
+          <li><a class="footer-menu__link">Mentions légales</a></li>
+          <li><a class="footer-menu__link">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

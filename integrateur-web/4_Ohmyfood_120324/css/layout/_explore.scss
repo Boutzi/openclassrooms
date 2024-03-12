@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    & > * {
+        margin: 8px 0;
+    }
+    &__title {
+        font-weight: $font-weight-bold;
+    }
+    &__subtitle {
+        font-weight: $font-weight-light;
+    }
+}
