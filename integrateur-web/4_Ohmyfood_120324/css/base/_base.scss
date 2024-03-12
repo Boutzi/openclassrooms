@@ -3,6 +3,17 @@
 body {
     font-family: $font-secondary;
     background-color: $color-canvas;
+    &::-webkit-scrollbar {
+      width: $scrollbar-size;
+    }
+    &::-webkit-scrollbar-track {
+      background: $scrollbar;
+      border-radius: $border-radius-m;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $scrollbar-thumb;
+      border-radius: $border-radius-m;
+    }
 }
 
 @for $i from 1 through 4 {
