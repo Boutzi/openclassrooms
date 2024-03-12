@@ -27,6 +27,15 @@
             object-position:center;
         }
     }
+    &__new-restaurant {
+        background: $color-tertiary;
+        color: $color-text-inverted;
+        position: absolute;
+        right: 13px;
+        top: 13px;
+        padding: 5px 10px;
+        border-radius: $border-radius-s;
+    }
     &__title {
         margin: 12px 0 0 12px;
     }

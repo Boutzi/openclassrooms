@@ -110,6 +110,15 @@ li {
   -o-object-position: center;
      object-position: center;
 }
+.thumbnails__new-restaurant {
+  background: #99E2D0;
+  color: #008766;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
 .thumbnails__title {
   margin: 12px 0 0 12px;
 }
@@ -261,6 +270,8 @@ li {
 }
 
 .explore {
+  width: 92%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
