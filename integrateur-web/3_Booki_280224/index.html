@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boutzi Booki</title>
+    <title>Booki</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,16 +23,12 @@
     <link rel="stylesheet" href="./css/activities.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/media.css" />
-    <script src="https://kit.fontawesome.com/54f3183466.js" crossorigin="anonymous">
-    </script>
-    <script
-      src="https://kit.fontawesome.com/54f3183466.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/54f3183466.js" crossorigin="anonymous"></script>
   </head>
-
   <body>
     <div class="main-container">
+
+      <!-- Navigation -->
       <header class="header">
         <div class="header__logo-content">
           <img
@@ -47,6 +43,8 @@
         </ul>
       </header>
       <main>
+
+        <!-- Infos -->
         <div class="info-group">
             <section class="info-group__section">
               <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
@@ -56,7 +54,7 @@
               <div class="section__location">
                 <form class="location__form">
                     <div class="form__icon" ><i class="fa-solid fa-location-dot"></i></div>
-                    <input type="text" value="" id="search-city" placeholder="">
+                    <input type="text" value="" id="search-city" placeholder="Marseilles, France">
                     <button type="submit"><span class="mobile"><i class="fa-solid fa-search"></i></span><span class="desktop">Rechercher</span></button>
                 </form>
               </div>
@@ -82,10 +80,10 @@
         </div>
         <div class="hebergements-and-populaires">
 
-          
+          <!-- Accomodations -->
           <section class="hebergements">
             <div class="hebergements-title">
-            <h2 class="section-title">Hébergements à <span class="ville"></span></h2>
+            <h2 class="section-title">Hébergements à Marseilles</h2>
             </div>
             <div class="hebergements-cards">
               <a href="#">
@@ -258,7 +256,7 @@
 
 
 
-
+          <!-- Populars -->
           <section class="populaires">
             <div class="populaires-title">
               <h2 class="section-title">Les plus populaires</h2>
@@ -351,10 +349,11 @@
             </div>
           </section>
         </div>
-        
+
+        <!-- Activies -->
         <section class="activities">
           <div class="activities__title">
-            <h2 class="section-title">Activités à <span class="ville"></span></h2>
+            <h2 class="section-title">Activités à Marseilles</h2>
           </div>
           <div class="activities__cards">
             <div class="card">
@@ -376,43 +375,34 @@
           </div>
         </section>
       </main>
-      <footer>
-<div class="footer__content">
-  <div class="content__about">
-    <h3>À propos</h3>
-  <ul>
-    <li><a href="#">Fonctionnement du site</a></li>
-    <li><a href="#">Conditions générales</a></li>
-    <li><a href="#">Données et confidentialité</a></li>
-  </ul>
-  </div>
-  <div class="content__accommodation">
-    <h3>Nos hébergements</h3>
-    <ul>
-      <li><a href="#">Charte qualité</a></li>
-      <li><a href="#">Proposer votre hôtel</a></li>
-    </ul>
-  </div>
-  <div class="content__assistance">
-    <h3>Assistance</h3>
-    <ul>
-      <li><a href="#">Centre d’aide</a></li>
-      <li><a href="#">Nous contacter</a></li>
-    </ul>
-  </div>
-</div>
 
+      <!-- footer -->
+      <footer>
+        <div class="footer__content">
+          <div class="content__about">
+            <h3>À propos</h3>
+          <ul>
+            <li><a href="#">Fonctionnement du site</a></li>
+            <li><a href="#">Conditions générales</a></li>
+            <li><a href="#">Données et confidentialité</a></li>
+          </ul>
+          </div>
+          <div class="content__accommodation">
+            <h3>Nos hébergements</h3>
+            <ul>
+              <li><a href="#">Charte qualité</a></li>
+              <li><a href="#">Proposer votre hôtel</a></li>
+            </ul>
+          </div>
+          <div class="content__assistance">
+            <h3>Assistance</h3>
+            <ul>
+              <li><a href="#">Centre d’aide</a></li>
+              <li><a href="#">Nous contacter</a></li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
-    <script>
-      const city = "Bordeaux";
-      const selectors = document.querySelectorAll(".ville");
-      selectors.forEach(selector => {
-       selector.innerText = city;
-      });
-      const searchInput = document.getElementById('search-city');
-      const placeholder = city + ", France";
-      searchInput.placeholder = placeholder;
-    </script>
   </body>
 </html>
