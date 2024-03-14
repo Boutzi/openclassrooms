@@ -13,7 +13,9 @@
   .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+    width: 100%;
   }
+  
   .populaires-cards a {
     width: 100%;
     display: flex;

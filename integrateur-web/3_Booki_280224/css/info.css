@@ -72,7 +72,6 @@
 .section__location input:focus {
     outline: none;
     background-color: #ffffff; 
-    width: 100%;
 }
 
 .section__location input::placeholder {
