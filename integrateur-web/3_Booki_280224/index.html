@@ -4,29 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booki</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/54f3183466.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/info.css" />
+    <link rel="stylesheet" href="./css/accomodations.css" />
+    <link rel="stylesheet" href="./css/populars.css" />
     <link rel="stylesheet" href="./css/activities.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/media.css" />
-    <script
-      src="https://kit.fontawesome.com/54f3183466.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div class="main-container">
@@ -39,10 +31,16 @@
             alt="Logo Booki"
           />
         </div>
-        <ul class="header__main-nav">
-          <li><a class="main-nav__button ischecked">Hébergements</a></li>
-          <li><a class="main-nav__button">Activités</a></li>
-        </ul>
+        <nav>
+          <ul class="header__main-nav">
+            <li>
+              <a href="#accomodation" class="main-nav__button">Hébergements</a>
+            </li>
+            <li>
+              <a href="#activities" class="main-nav__button">Activités</a>
+            </li>
+          </ul>
+        </nav>
       </header>
       <main>
         <!-- Infos -->
@@ -61,7 +59,7 @@
                   type="text"
                   value=""
                   id="search-city"
-                  placeholder="Marseilles, France"
+                  placeholder="Marseille, France"
                 />
                 <button type="submit">
                   <span class="mobile"><i class="fa-solid fa-search"></i></span
@@ -101,9 +99,9 @@
         </div>
         <div class="hebergements-and-populaires">
           <!-- Accomodations -->
-          <section class="hebergements">
+          <section id="accomodation" class="hebergements">
             <div class="hebergements-title">
-              <h1 class="section-title">Hébergements à Marseilles</h1>
+              <h1 class="section-title">Hébergements à Marseille</h1>
             </div>
             <div class="hebergements-cards">
               <a href="#">
@@ -270,10 +268,7 @@
               </a>
             </div>
             <div class="show_more">
-              <a href=""
-                ><h2>Afficher plus</h2>
-                <i class="fa-solid fa-caret-down"></i
-              ></a>
+              <a href="#"><h2>Afficher plus</h2></a>
             </div>
           </section>
 
@@ -372,27 +367,35 @@
         </div>
 
         <!-- Activies -->
-        <section class="activities">
+        <section id="activities" class="activities">
           <div class="activities__title">
-            <h1 class="section-title">Activités à Marseilles</h1>
+            <h1 class="section-title">Activités à Marseille</h1>
           </div>
           <div class="activities__cards">
-            <div class="card">
-              <img src="images/activites/reno-laithienne.jpg" alt="" />
-              <h2>Vieux Port</h2>
-            </div>
-            <div class="card">
-              <img src="images/activites/paul-hermann.jpg" alt="" />
-              <h2>Fort de Pomègues</h2>
-            </div>
-            <div class="card">
-              <img src="images/activites/kilyan-sockalingum.jpg" alt="" />
-              <h2>Parc national des Calanques</h2>
-            </div>
-            <div class="card">
-              <img src="images/activites/florian-wehde.jpg" alt="" />
-              <h2>Notre-Dame-de-la-Garde</h2>
-            </div>
+            <a href="#">
+              <article class="card">
+                <img src="images/activites/reno-laithienne.jpg" alt="" />
+                <h2>Vieux Port</h2>
+              </article></a
+            >
+            <a href="#">
+              <article class="card">
+                <img src="images/activites/paul-hermann.jpg" alt="" />
+                <h2>Fort de Pomègues</h2>
+              </article></a
+            >
+            <a href="#">
+              <article class="card">
+                <img src="images/activites/kilyan-sockalingum.jpg" alt="" />
+                <h2>Parc national des Calanques</h2>
+              </article></a
+            >
+            <a href="#">
+              <article class="card">
+                <img src="images/activites/florian-wehde.jpg" alt="" />
+                <h2>Notre-Dame-de-la-Garde</h2>
+              </article></a
+            >
           </div>
         </section>
       </main>

@@ -1,5 +1,6 @@
 .activities {
-  width: 100%;
+  width: fit-content;
+  margin: 0 30px;
 }
 
 .activities__title {
@@ -9,16 +10,19 @@
 }
 
 .activities__cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
-    margin-top: 33px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 33px;
 }
 
 .activities__cards .card {
   height: 439px;
-  transition: 0.3s ease;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
 }
 
 .activities__cards .card img {
@@ -28,8 +32,11 @@
   border-top-right-radius: 15px;
 }
 
-.activities__cards .card h3 {
-    margin:15px 0 15px 10px;
-  }
-  
+.activities__cards a {
+  width: 100%;
+  display: flex;
+}
 
+.activities__cards .card h2 {
+  margin: 15px 0 15px 10px;
+}

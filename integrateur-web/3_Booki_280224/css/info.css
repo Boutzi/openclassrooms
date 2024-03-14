@@ -7,7 +7,7 @@
 }
 
 
-.info-group__section h3 {
+.info-group__section h2 {
     line-height: 2.5rem;
 }
 
@@ -46,6 +46,7 @@
 .form__icon i {
     color: #000;
     line-height: 47px;
+    width: 49px;
 }
 
 .section__location input,
@@ -61,28 +62,20 @@
 
 .section__location input:hover {
     outline: none;
-    background-color: #ffffff; 
-    transition: 0.3s;
-}
-
-.section__location input:focus {
-    outline: none;
-    background-color: #ffffff; 
-    width: 500px;
-}
-
-.section__location input:not(:placeholder-shown) {
-    width: 500px;
 }
 
 .section__location input {
     width: 200px;
     padding: 0 15px; 
-    background-color: #f4f4f4; 
-    transition: 0.3s ease;
+    background-color: #ffffff; 
     border: none;
 }
 
+.section__location input:focus {
+    outline: none;
+    background-color: #ffffff; 
+    width: 100%;
+}
 .section__location input::placeholder {
     color: #6d6d6d;
     font-weight: 400;
@@ -125,7 +118,7 @@
     align-items: center;
 }
 
-.section__filter h3 {
+.section__filter h2 {
     margin: 0 10px 2px 0;
 }
 
