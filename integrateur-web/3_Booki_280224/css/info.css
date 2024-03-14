@@ -11,7 +11,6 @@
     line-height: 2.5rem;
 }
 
-
 /* LOCATION */
 .section__location form {
     height: 49px;
@@ -41,7 +40,6 @@
     border-radius: 15px 0 0 15px;
     border-right: 1px solid var(--filter-bg-color);
 }
-
 
 .form__icon i {
     color: #000;
@@ -76,6 +74,7 @@
     background-color: #ffffff; 
     width: 100%;
 }
+
 .section__location input::placeholder {
     color: #6d6d6d;
     font-weight: 400;
@@ -109,8 +108,8 @@
 .location__form .desktop {
     display: inline;
 }
-/* FILTERS */
 
+/* FILTERS */
 .section__filter {
     height: 49px;
     width: 100%;

@@ -84,7 +84,7 @@ p {
   cursor: pointer;
 }
 
-/****** Hebergements And Populaires ***********/
+/****** Accomodations and Populars ***********/
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
