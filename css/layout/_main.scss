@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+.main {
+    display:flex;
+    flex-direction: column;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 32px;
+    background: $color-canvas;
+    align-items: center;
+    min-height: 100vh;
+    border-radius: $border-radius-l $border-radius-l 0 0;
+    box-shadow: $box-shadow-m;
+    &__logo {
+        display: flex;
+        width: 400px;
+    }
+    &__title {
+        display: flex;
+        text-align: center;
+    }
+    &__container {
+        display: flex;
+        margin-top: 32px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 16px;
+    }
+}
