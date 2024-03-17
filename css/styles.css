@@ -137,6 +137,12 @@ li {
   display: flex;
   margin-bottom: 10px;
 }
+.project .element .title i {
+  display: flex;
+  align-items: center;
+  color: #2E7E32;
+  margin-left: 8px;
+}
 .project .element .subtitle {
   display: flex;
 }
