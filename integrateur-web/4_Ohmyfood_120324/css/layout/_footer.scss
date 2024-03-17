@@ -7,6 +7,9 @@
     background-color: $color-canvas-dark;
     align-items: center;
     justify-content: center;
+    @include media-min($breakpoint-xl) {
+        height: 114px;
+    }
 }
 
 .footer-content {
@@ -21,6 +24,10 @@
         color: $color-pure;
         font-family: $font-primary;
         margin: 15px 0;
+        @include media-min($breakpoint-xl) {
+            text-align: right;
+            margin: 45px 0 15px 0;
+        }
     }
     .footer-menu {
         display: flex;
@@ -40,5 +47,16 @@
                 font-weight: $font-weight-medium;
             }
         }
+        @include media-min($breakpoint-xl) {
+            flex-direction: row;
+            justify-content: right;
+            margin-top: 30px;
+        }
+    }
+    @include media-min($breakpoint-xl) {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: right;
+        gap:30px;
     }
 }

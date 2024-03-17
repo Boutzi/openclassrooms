@@ -1,5 +1,48 @@
 @use "../abstracts/" as *;
 
+#overlay {
+    z-index: $z-index-dropdown;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: $color-tertiary;
+    opacity: 1;
+    animation: loader 500ms ease-out 3000ms forwards;
+}
+
+.load {
+    z-index: $z-index-modal;
+    font-family: $font-primary;
+    color: $color-pure;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-xxxl;
+    animation: loader 500ms ease-in-out 3000ms forwards;
+    &__bar {
+        display: flex;
+        position: relative;
+        background: $color-pure;
+        width: 100%;
+        height: 3px;
+        transform-origin: left;
+        animation: loader__bar 3000ms ease-in-out backwards;
+    }
+    &__letters {
+        display: flex;
+        @for $i from 1 through $total-letters {
+            .letter-#{$i} {
+                animation: loader__letters $animation-duration ease-in ($i * 150ms) 4;
+            }
+        }
+    }
+
+}
+
 .section {
     width: 100%;
     padding: 50px 0;
@@ -18,36 +61,63 @@
     height: 251px;
     overflow: hidden;
     position: relative;
-    &__picture {
+    .link {
         width: 100%;
-        height: 70%;
-        object-fit: cover;
-        object-position: bottom;
-        &--top-visible {
-            object-position:center;
+        height: 251px;
+        &__picture {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            object-position: bottom;
+            &--top-visible {
+                object-position:center;
+            }
+        }
+        &__new-restaurant {
+            background: $color-tertiary;
+            color: $color-text-inverted;
+            position: absolute;
+            right: 13px;
+            top: 13px;
+            padding: 5px 10px;
+            border-radius: $border-radius-s;
+        }
+        &__title {
+            margin: 12px 0 0 12px;
+        }
+        &__subtitle {
+            margin: 4px 0 0 12px;
+            font-weight: $font-weight-light;
+        }
+        &__like-btn {
+            display: flex;
+            position: absolute;
+            bottom: 32px;
+            right: 24px;
+            cursor: pointer;
+            & .fa-heart {
+                font-weight: $font-weight-regular; 
+                background: $color-pure-inverted;
+                font-size: $font-size-l;
+                background-clip:text;
+                color: transparent;
+                &:hover {
+                    font-weight: $font-weight-bold;
+                    @include button-gradient-inverted;
+                    background-clip:text;
+                    color: transparent;
+                }
+            }
+            .checked .fa-heart {
+                font-weight: $font-weight-bold;
+                @include button-gradient-inverted;
+                background-clip:text;
+                color: transparent;
+            }
         }
     }
-    &__new-restaurant {
-        background: $color-tertiary;
-        color: $color-text-inverted;
-        position: absolute;
-        right: 13px;
-        top: 13px;
-        padding: 5px 10px;
-        border-radius: $border-radius-s;
-    }
-    &__title {
-        margin: 12px 0 0 12px;
-    }
-    &__subtitle {
-        margin: 4px 0 0 12px;
-        font-weight: $font-weight-light;
-    }
-    &__like-btn {
-        display: flex;
-        position: absolute;
-        bottom: 32px;
-        right: 24px;
-        cursor: pointer;
+    
+    @include media-min($breakpoint-m) {
+        width: 48%;
     }
 }

@@ -16,4 +16,7 @@
     &__subtitle {
         font-weight: $font-weight-light;
     }
+    @include media-min($breakpoint-xl) {
+        width: 1200px;
+    }
 }

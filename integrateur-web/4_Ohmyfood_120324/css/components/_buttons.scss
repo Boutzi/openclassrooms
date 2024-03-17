@@ -7,6 +7,7 @@
     font-weight: $font-weight-medium;
     position: relative;
     margin: 12.5px 0;
+    cursor: pointer;
     &--main {
         @include button-gradient;
         border-radius: $border-radius-xxl;
@@ -16,6 +17,11 @@
         min-width: 186px;
         max-width: fit-content;
         justify-content: center;
+        transition: all 200ms ease-in-out;
+        &:hover {
+            opacity: 0.85;
+            box-shadow: $box-shadow-xxl;
+        }
     }
     &--selection {
         background: $color-canvas;
@@ -23,7 +29,7 @@
         padding: 25px 20px;
         box-shadow: $box-shadow-xl;
         color: $color-pure-inverted;
-        min-width: 335px;
+        min-width: 220px;
         width: 100%;
         margin: 0 16px;
         left: -12px;

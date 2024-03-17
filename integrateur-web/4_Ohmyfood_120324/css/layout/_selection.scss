@@ -6,6 +6,9 @@
     &__title {
         margin-bottom: 35px;
     }
+    @include media-min($breakpoint-xl) {
+        width: $width-xl;
+    }
 }
 
 .selectors {
@@ -13,4 +16,7 @@
     flex-direction: column;
     justify-content:space-evenly;
     gap: 25px;
+    @include media-min($breakpoint-l) {
+        flex-direction: row;
+    }
 }

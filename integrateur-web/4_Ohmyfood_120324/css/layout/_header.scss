@@ -10,6 +10,13 @@
     align-items: center;
     justify-content: center;
     box-shadow: $box-shadow-s;
+    position: relative;
+    &__return-arrow {
+        display: flex;
+        position: absolute;
+        left: 20px;
+        font-size: $font-size-m;
+    }
 }
 
 .location {

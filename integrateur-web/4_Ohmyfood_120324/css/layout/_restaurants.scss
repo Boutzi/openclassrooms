@@ -4,4 +4,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include media-min($breakpoint-m) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 } 
