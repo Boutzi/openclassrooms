@@ -86,7 +86,9 @@ li {
   width: 100%;
   height: 120px;
   position: relative;
-  background: #d6d6d6;
+  background: rgb(203, 191, 246);
+  background: linear-gradient(129deg, rgb(203, 191, 246) 0%, rgb(92, 88, 107) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cbbff6",endColorstr="#5c586b",GradientType=1);
 }
 .project .element__picture img {
   -o-object-fit: cover;
@@ -109,11 +111,22 @@ li {
   width: -moz-fit-content;
   width: fit-content;
   justify-content: right;
+  z-index: 10;
 }
 .project .element__picture .technologies img {
   height: 100%;
   padding: 4px;
   margin: 0 2px;
+}
+.project .element__picture .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(129deg, rgba(255, 255, 255, 0) 0%, rgba(92, 88, 107, 0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#5c586b",GradientType=1);
 }
 .project .element__txt {
   padding: 16px;
@@ -131,7 +144,7 @@ li {
 .header {
   display: flex;
   width: 90%;
-  height: 100px;
+  height: 128px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;

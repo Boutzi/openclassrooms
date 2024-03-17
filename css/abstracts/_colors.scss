@@ -11,3 +11,19 @@ $color-text-inverted: #f2f2f2;
 $color-selector:#2a6cd7;
 $color-danger: #D93936;
 $color-success: #2E7E32;
+
+@mixin gradient-empty {
+    background: rgb(203,191,246);
+    background: -moz-linear-gradient(129deg, rgba(203,191,246,1) 0%, rgba(92,88,107,1) 100%);
+    background: -webkit-linear-gradient(129deg, rgba(203,191,246,1) 0%, rgba(92,88,107,1) 100%);
+    background: linear-gradient(129deg, rgba(203,191,246,1) 0%, rgba(92,88,107,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cbbff6",endColorstr="#5c586b",GradientType=1);
+}
+
+@mixin gradient {
+background: rgb(255,255,255);
+background: -moz-linear-gradient(129deg, rgba(255,255,255,0) 0%, rgba(92,88,107,0.6) 100%);
+background: -webkit-linear-gradient(129deg, rgba(255,255,255,0) 0%, rgba(92,88,107,0.6) 100%);
+background: linear-gradient(129deg, rgba(255,255,255,0) 0%, rgba(92,88,107,0.6) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#5c586b",GradientType=1);
+}

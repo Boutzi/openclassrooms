@@ -16,7 +16,7 @@
             width: 100%;
             height: 120px;
             position: relative;
-            background: #d6d6d6;
+            @include gradient-empty;
             img {
                 object-fit: cover;
                 height: 120px;
@@ -35,11 +35,20 @@
                 height: 38px;
                 width: fit-content;
                 justify-content: right;
+                z-index: 10;
                 img {
                     height: 100%;
                     padding: 4px;
                     margin: 0 2px;
                 }
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                @include gradient;
             }
         }
         
