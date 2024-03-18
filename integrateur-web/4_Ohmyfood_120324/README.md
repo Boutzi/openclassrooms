@@ -1,4 +1,4 @@
-# DW-V3-P2
+# P3
 
 ### GitHub
 [Suivi du rendu des projets](https://boutzi.github.io/openclassrooms/)  

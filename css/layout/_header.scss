@@ -10,5 +10,11 @@
     &__logo {
         display: flex;
         width: 600px;
+        @include media-max($breakpoint-m) {
+            width: 100%;
+        }
+    }
+    @include media-max($breakpoint-s) {
+        height: 92px;
     }
 }

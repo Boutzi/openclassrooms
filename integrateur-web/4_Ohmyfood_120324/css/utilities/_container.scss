@@ -7,7 +7,7 @@
     height: 100vh;
     background: $color-tertiary;
     opacity: 1;
-    animation: loader 500ms ease-out 3000ms forwards;
+    animation: loader 3000ms ease-out forwards 1;
 }
 
 .load {

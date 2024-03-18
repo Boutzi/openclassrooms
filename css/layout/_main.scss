@@ -32,5 +32,12 @@
         flex-wrap: wrap;
         width: 100%;
         gap: 16px;
+        @include media-max($breakpoint-m) {
+            flex-direction: column;
+        }
+    }
+    @include media-max($breakpoint-l) {
+        width: 100%;
+        border-radius: 0;
     }
 }

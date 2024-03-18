@@ -2,11 +2,23 @@
   0% {
     opacity: 1;
   }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
   99% {
     opacity: 0;
+    width: 100%;
+    height: 100vh;
   }
   100% {
-    display: none;
+    width: 0;
+    height: 0;
   }
 }
 @keyframes loader__letters {
@@ -155,7 +167,7 @@ li {
   height: 100vh;
   background: #99E2D0;
   opacity: 1;
-  animation: loader 500ms ease-out 3000ms forwards;
+  animation: loader 3000ms ease-out forwards 1;
 }
 
 .load {

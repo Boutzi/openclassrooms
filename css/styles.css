@@ -71,6 +71,7 @@ li {
 .project {
   display: flex;
   width: 49%;
+  justify-content: stretch;
 }
 .project .element {
   display: flex;
@@ -98,6 +99,11 @@ li {
   -o-object-position: top;
      object-position: top;
 }
+@media screen and (max-width: 576px) {
+  .project .element__picture img {
+    height: 64px;
+  }
+}
 .project .element__picture .technologies {
   opacity: 0.9;
   position: absolute;
@@ -118,6 +124,18 @@ li {
   padding: 4px;
   margin: 0 2px;
 }
+@media screen and (max-width: 576px) {
+  .project .element__picture .technologies img {
+    width: 32px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .project .element__picture .technologies {
+    height: 32px;
+    flex-wrap: wrap;
+    margin-left: 8px;
+  }
+}
 .project .element__picture .overlay {
   position: absolute;
   top: 0;
@@ -127,6 +145,11 @@ li {
   background: rgb(255, 255, 255);
   background: linear-gradient(129deg, rgba(255, 255, 255, 0) 0%, rgba(92, 88, 107, 0.6) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#5c586b",GradientType=1);
+}
+@media screen and (max-width: 576px) {
+  .project .element__picture {
+    height: 64px;
+  }
 }
 .project .element__txt {
   padding: 16px;
@@ -146,6 +169,11 @@ li {
 .project .element .subtitle {
   display: flex;
 }
+@media screen and (max-width: 900px) {
+  .project {
+    width: 100%;
+  }
+}
 
 .header {
   display: flex;
@@ -158,6 +186,16 @@ li {
 .header__logo {
   display: flex;
   width: 600px;
+}
+@media screen and (max-width: 900px) {
+  .header__logo {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    height: 92px;
+  }
 }
 
 .main {
@@ -193,6 +231,17 @@ li {
   flex-wrap: wrap;
   width: 100%;
   gap: 16px;
+}
+@media screen and (max-width: 900px) {
+  .main__container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .main {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 .footer {

@@ -3,3 +3,9 @@
         &{ @content; }
     }
 }
+
+@mixin media-max($_breakpoint) {
+    @media screen and (max-width: $_breakpoint) {
+        &{ @content; }
+    }
+}
