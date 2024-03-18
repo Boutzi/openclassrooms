@@ -61,7 +61,8 @@ function arrowClick(direction) {
 				view = 0;
 			}
 			break;
-	}
+		}
+
 	slide.src = `assets/images/slideshow/${slides[view].image}`;
 	bannerTitle.innerHTML = slides[view].tagLine;
 	dotSelected = document.querySelector(`.dot${view}`);
@@ -74,3 +75,22 @@ arrowLeft.addEventListener("click", () => {
 arrowRight.addEventListener("click", () => {
 	arrowClick("droite");
 });
+
+
+
+// Slideshow: DOTS Change BONUS
+function dotClick(selected) {
+	dotSelected.classList.remove(`dot_selected`);
+	slide.src = `assets/images/slideshow/${slides[selected].image}`;
+	bannerTitle.innerHTML = slides[selected].tagLine;
+	dotSelected = document.querySelector(`.dot${selected}`);
+	dotSelected.classList.add("dot_selected");
+	view = selected;
+}
+
+for (let i = 0; i < slides.length ; i++) {
+	let dot = document.querySelector(`.dot${i}`)
+	dot.addEventListener("click", () => {
+		dotClick(i);
+	});
+}
