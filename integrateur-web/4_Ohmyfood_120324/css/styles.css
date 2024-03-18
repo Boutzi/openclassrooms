@@ -177,7 +177,7 @@ li {
   width: 100%;
   height: 100vh;
   background: #99E2D0;
-  opacity: 1;
+  opacity: 0;
   animation: loader 3000ms ease-out forwards 1;
 }
 
