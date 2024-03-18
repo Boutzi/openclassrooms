@@ -76,7 +76,7 @@ arrowRight.addEventListener("click", () => {
 	arrowClick("droite");
 });
 
-// Slideshow: DOTS Change BONUS
+// Slideshow: DOTS Change - BONUS
 function dotClick(selected) {
 	dotSelected.classList.remove(`dot_selected`);
 	slide.src = `assets/images/slideshow/${slides[selected].image}`;

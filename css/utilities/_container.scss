@@ -40,6 +40,14 @@
                 width: fit-content;
                 justify-content: right;
                 z-index: 10;
+                i {
+                    color: $color-plus;
+                    position: absolute;
+                    font-size: 16px;
+                    top:12px;
+                    left:-12px;
+                    filter: drop-shadow($box-shadow-m);
+                }
                 img {
                     height: 100%;
                     padding: 4px;

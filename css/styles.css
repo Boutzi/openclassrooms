@@ -119,6 +119,14 @@ li {
   justify-content: right;
   z-index: 10;
 }
+.project .element__picture .technologies i {
+  color: #e7d10d;
+  position: absolute;
+  font-size: 16px;
+  top: 12px;
+  left: -12px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .project .element__picture .technologies img {
   height: 100%;
   padding: 4px;
