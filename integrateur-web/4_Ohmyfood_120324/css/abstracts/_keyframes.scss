@@ -26,7 +26,7 @@ $animation-duration: 1500ms + ($total-letters * 100ms);
 }
 
 @keyframes loader__letters {
-    0%, 100% {
+    0%, 99% {
         opacity: 1;
         transform: scale(100%);
     }
@@ -37,6 +37,10 @@ $animation-duration: 1500ms + ($total-letters * 100ms);
     50% {
         opacity: 1;
         transform: scale(100%);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0%);
     }
 }
 
