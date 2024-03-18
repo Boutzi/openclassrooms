@@ -11,6 +11,8 @@
     min-height: 100vh;
     border-radius: $border-radius-l;
     box-shadow: $box-shadow-m;
+    transform-origin: top;
+    animation: main-display 900ms ease-in-out forwards;
     &__logo {
         display: flex;
         width: 400px;
@@ -20,6 +22,8 @@
         width: 100%;
         justify-content: left;
         align-items: center;
+        opacity: 0;
+        animation: project-display 1000ms ease-in-out forwards 500ms;
         i {
             margin-left: 16px;
             font-size: 1.5rem;

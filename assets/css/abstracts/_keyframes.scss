@@ -1,0 +1,26 @@
+@keyframes main-display {
+    0% {
+        transform: scaleY(0%);
+    }
+    100% {
+        transform: scaleY(100%);
+    }
+}
+
+@keyframes project-display {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes empty-on-click {
+    25% {
+        transform: translateX(2%);
+    }
+    75% {
+        transform: translateX(2% * -1);
+    }
+}

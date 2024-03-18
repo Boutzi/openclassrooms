@@ -13,6 +13,9 @@ $color-selector:#2a6cd7;
 $color-danger: #D93936;
 $color-success: #2E7E32;
 
+$scrollbar:#482e9e;
+$scrollbar-thumb:#b5a1f4;
+
 @mixin gradient-empty {
     background: rgb(203,191,246);
     background: -moz-linear-gradient(129deg, rgba(203,191,246,1) 0%, rgba(92,88,107,1) 100%);

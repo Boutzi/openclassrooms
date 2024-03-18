@@ -4,6 +4,9 @@
     display: flex;
     width: 49%;
     justify-content: stretch;
+    &--empty:active {
+        animation: empty-on-click 100ms cubic-bezier(.4,.1,.6,.9);
+    }
     .element {
         display: flex;
         flex-direction: column;
@@ -12,6 +15,8 @@
         box-shadow: $box-shadow-xl;
         width: 100%;
         background: $color-secondary;
+        opacity: 0;
+        animation: project-display 600ms ease-in-out forwards 1000ms;
         &__picture {
             display: flex;
             width: 100%;
@@ -28,7 +33,6 @@
                 }
             }
             .technologies {
-                opacity: 0.9;
                 position: absolute;
                 bottom: 0px;
                 right: 0;

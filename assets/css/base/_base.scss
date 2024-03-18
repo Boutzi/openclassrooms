@@ -1,9 +1,23 @@
 @use "../abstracts/" as *;
 
 body {
-    font-family: $font-secondary;
-    background: $color-primary;
+  font-family: $font-secondary;
+  background: $color-primary;
+
+  &::-webkit-scrollbar {
+      width: $scrollbar-size;
+  }
+
+  &::-webkit-scrollbar-track {
+      background: $scrollbar;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background: $scrollbar-thumb;
+      border-radius: $border-radius-s;
+  }
 }
+
 
 @for $i from 1 through 3 {
     h#{$i} {
