@@ -26,21 +26,28 @@ $animation-duration: 1500ms + ($total-letters * 100ms);
 }
 
 @keyframes loader__letters {
-    0%, 99% {
+    0% {
         opacity: 1;
-        transform: scale(100%);
+        transform: scaleY(100%);
     }
-    25%, 75% {
-        opacity: 0.3;
-        transform: scale(120%);
-    }
-    50% {
+    20% {
         opacity: 1;
-        transform: scale(100%);
+        transform: scaleY(120%);
+    }
+    40% {
+        opacity: 1;
+        transform: scaleY(100%);
+    }
+    60% {
+        opacity: 1;
+        transform: scaleY(120%);
+    }
+    80% {
+        transform: scaleY(100%);
+        opacity: 0;
     }
     100% {
-        opacity: 0;
-        transform: scale(0%);
+        transform: scaleY(0%);
     }
 }
 
