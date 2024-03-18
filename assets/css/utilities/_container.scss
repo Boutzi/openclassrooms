@@ -13,10 +13,10 @@
         overflow: hidden;
         border-radius: $border-radius-m;
         box-shadow: $box-shadow-xl;
-        width: 100%;
         background: $color-secondary;
+        width: 100%;
         opacity: 0;
-        animation: project-display 600ms ease-in-out forwards 1000ms;
+        animation: project-display 150ms ease-in-out forwards 1050ms;
         &__picture {
             display: flex;
             width: 100%;

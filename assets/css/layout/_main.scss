@@ -7,10 +7,10 @@
     margin: 8px auto;
     padding: 32px 32px 64px 32px;
     background: $color-canvas;
-    align-items: center;
-    min-height: 500px;
     border-radius: $border-radius-l;
     box-shadow: $box-shadow-m;
+    align-items: center;
+    min-height: 500px;
     transform-origin: top;
     animation: main-display 900ms ease-in-out forwards;
     &__logo {
@@ -23,10 +23,12 @@
         justify-content: left;
         align-items: center;
         opacity: 0;
-        animation: project-display 1000ms ease-in-out forwards 500ms;
+        animation: project-display 800ms ease-in-out forwards 300ms;
         i {
             margin-left: 16px;
             font-size: 1.5rem;
+            transform:  rotate(-90deg);
+            animation: rotate 300ms ease forwards 800ms;
         }
     }
     &__container {

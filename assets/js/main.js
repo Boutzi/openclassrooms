@@ -1,3 +1,4 @@
+// #region Project Class
 class Project {
     constructor(id, repository, picture, technology, subtitle, success) {
       this.id = id;
@@ -58,7 +59,9 @@ class Project {
       elementTxt.appendChild(elementSubtitle);
     }
   }
+// #endregion
 
+//#region json
 const jsonPath =
   "https://gist.githubusercontent.com/Boutzi/95edd6c7fbd8f8c1125c4b992938ef7b/raw/b5b762c8fb3bd9543b2e263c06b27ed81303615a/oc-projects.json";
 
@@ -78,6 +81,7 @@ fetchProjects().then((projects) => {
         project.createProject();
     });
 });
+//#enregion
 
 const emptyProjects = document.querySelectorAll(".project");
 
