@@ -63,7 +63,7 @@ class Project {
 
 //#region json
 const jsonPath =
-  "https://gist.githubusercontent.com/Boutzi/95edd6c7fbd8f8c1125c4b992938ef7b/raw/b5b762c8fb3bd9543b2e263c06b27ed81303615a/oc-projects.json";
+  "https://gist.githubusercontent.com/Boutzi/95edd6c7fbd8f8c1125c4b992938ef7b/raw/dfd8fce194df315c06e04022534499f3cbff9765/oc-projects.json";
 
 async function fetchProjects() {
     try {

@@ -4,6 +4,11 @@
     display: flex;
     width: 49%;
     justify-content: stretch;
+    box-sizing: border-box;
+    transition: transform 200ms ease-in-out;
+    &:hover {
+        transform: scale(102%);
+    }
     &--empty:active {
         animation: empty-on-click 100ms cubic-bezier(.4,.1,.6,.9);
     }
@@ -27,7 +32,7 @@
                 object-fit: cover;
                 height: 120px;
                 width: 100%;
-                object-position: top;
+                object-position: center;
                 @include media-max($breakpoint-s) {
                     height: 64px;
                 }
