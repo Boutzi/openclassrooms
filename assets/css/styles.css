@@ -30,6 +30,14 @@
     transform: rotate(0deg);
   }
 }
+@keyframes zoom {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(103%);
+  }
+}
 body {
   font-family: "Inter", sans-serif;
   background: #7451EB;
@@ -243,6 +251,7 @@ li {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .header__logo {
   display: flex;
@@ -261,6 +270,7 @@ li {
 
 .main {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 1050px;
   margin: 8px auto;
@@ -272,6 +282,53 @@ li {
   min-height: 500px;
   transform-origin: top;
   animation: main-display 900ms ease-in-out forwards;
+}
+.main__github-logo {
+  right: 20px;
+  position: absolute;
+  top: -50px;
+  display: flex;
+  transform-origin: top;
+  justify-content: right;
+  overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50px;
+  transition: all 100ms ease-in-out;
+}
+.main__github-logo .github-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+}
+.main__github-logo .github-link img {
+  width: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.main__github-logo .github-link p {
+  color: transparent;
+  margin-bottom: 8px;
+  padding: 0 8px;
+}
+.main__github-logo:hover {
+  transform: translateY(-50%);
+  height: 100px;
+}
+.main__github-logo:hover > .github-link p {
+  color: #f2f2f2;
+  font-size: 0.938rem;
+  font-weight: 600;
+  animation: zoom 1s ease-in-out alternate infinite;
+}
+@media screen and (max-width: 900px) {
+  .main__github-logo {
+    display: none;
+  }
 }
 .main__logo {
   display: flex;

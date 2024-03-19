@@ -2,6 +2,7 @@
 
 .main {
     display:flex;
+    position: relative;
     flex-direction: column;
     width: 1050px;
     margin: 8px auto;
@@ -13,6 +14,54 @@
     min-height: 500px;
     transform-origin: top;
     animation: main-display 900ms ease-in-out forwards;
+    &__github-logo {
+        right: 20px;
+        position: absolute;
+        top:-50px;
+        display: flex;
+        transform-origin: top;
+        justify-content: right;
+        overflow: hidden;
+        width: fit-content;
+        height: 50px; // 50px
+        transition: all 100ms ease-in-out;
+        .github-link {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            filter: drop-shadow( 0 3px 4px rgba(0, 0, 0, 0.1));
+            cursor: pointer;
+            // &__svg {
+            //     path {
+            //         width: 100%;
+            //         animation: github-ears 1s forwards infinite;
+            //     }
+            // }
+            img {
+                width: 90px;
+                object-fit: cover;
+                object-position: top;
+            }
+            p {
+                color: transparent;
+                margin-bottom: 8px;
+                padding: 0 8px;
+            }
+        }
+        &:hover {
+            transform: translateY(-50%);
+            height: 100px;
+        }
+        &:hover > .github-link p {
+            color: $color-text-inverted;
+            font-size: $font-size-xs;
+            font-weight: 600;
+            animation: zoom 1s ease-in-out alternate infinite;
+        }
+        @include media-max($breakpoint-m) {
+            display: none;
+        }
+    }
     &__logo {
         display: flex;
         width: 400px;
