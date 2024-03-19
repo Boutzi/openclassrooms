@@ -93,3 +93,8 @@ emptyProjects.forEach(element => {
         }
     });
 });
+
+
+console.log("Pourquoi tu regardes la console ?");
+console.log("Tu cherches une erreur ?");
+console.log("Désolé, il n'y en a pas ! ;)");
