@@ -63,6 +63,7 @@
                     margin: 0 2px;
                     @include media-max($breakpoint-s) {
                         width: 32px;
+                        object-fit:contain;
                     }
                 }
                 @include media-max($breakpoint-s) {
