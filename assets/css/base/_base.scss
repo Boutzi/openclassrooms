@@ -37,17 +37,6 @@ a {
     }
 }
 
-input, textarea, select, button {
-    font-family: inherit;
-    font-size: inherit;
-    padding: 10px;
-    border:1px solid $color-canvas-inverted;
-  }
-
-input:focus, textarea:focus, select:focus {
-    outline: 2px solid $color-selector;
-    border:1px solid transparent;
-}
 
 button {
     cursor: pointer;

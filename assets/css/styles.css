@@ -81,18 +81,6 @@ a:active {
   color: #7451EB;
 }
 
-input, textarea, select, button {
-  font-family: inherit;
-  font-size: inherit;
-  padding: 10px;
-  border: 1px solid #0A0A0A;
-}
-
-input:focus, textarea:focus, select:focus {
-  outline: 2px solid #2a6cd7;
-  border: 1px solid transparent;
-}
-
 button {
   cursor: pointer;
 }
