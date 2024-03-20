@@ -39,7 +39,7 @@
             }
             .technologies {
                 position: absolute;
-                bottom: 0px;
+                bottom: -1px;
                 right: 0;
                 margin-right: 8px;
                 display: flex;
@@ -57,7 +57,7 @@
                     left:-12px;
                     filter: drop-shadow($box-shadow-m);
                 }
-                img {
+                .techno-svg {
                     height: 100%;
                     padding: 4px;
                     margin: 0 2px;

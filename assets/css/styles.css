@@ -97,6 +97,17 @@ button {
   cursor: pointer;
 }
 
+.tooltip {
+  display: flex;
+}
+.tooltip__logo {
+  width: 64px;
+  margin: 10px;
+}
+.tooltip__about {
+  margin: 10px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -166,7 +177,7 @@ li {
 }
 .project .element__picture .technologies {
   position: absolute;
-  bottom: 0px;
+  bottom: -1px;
   right: 0;
   margin-right: 8px;
   display: flex;
@@ -186,13 +197,13 @@ li {
   left: -12px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.project .element__picture .technologies img {
+.project .element__picture .technologies .techno-svg {
   height: 100%;
   padding: 4px;
   margin: 0 2px;
 }
 @media screen and (max-width: 576px) {
-  .project .element__picture .technologies img {
+  .project .element__picture .technologies .techno-svg {
     width: 32px;
     -o-object-fit: contain;
        object-fit: contain;

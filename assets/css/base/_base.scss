@@ -48,6 +48,18 @@ input:focus, textarea:focus, select:focus {
     outline: 2px solid $color-selector;
     border:1px solid transparent;
 }
-  button {
+
+button {
     cursor: pointer;
-  }
+}
+
+.tooltip {
+    display: flex;
+    &__logo {
+        width: 64px;
+        margin:10px;
+    }
+    &__about {
+        margin:10px;
+    }
+}

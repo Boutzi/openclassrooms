@@ -22,6 +22,8 @@ export class Project {
           const techSVG = document.createElement("img");
           techSVG.src = `assets/images/${tech}.svg`;
           techSVG.alt = `Logo ${tech}`;
+          techSVG.classList.add("techno-svg");
+          techSVG.classList.add(tech);
           elementTechnologies.appendChild(techSVG);
         });
       }
