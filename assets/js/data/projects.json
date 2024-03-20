@@ -42,7 +42,7 @@
    {
      "id": 6,
      "repository": "#",
-     "picture": "",
+     "picture": "assets/images/p0.png",
      "technology": ["powershell"],
      "subtitle": "Créez une page web dynamique avec JavaScript",
      "success": false

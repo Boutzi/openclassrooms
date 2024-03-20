@@ -2,9 +2,9 @@ import { Project } from "/assets/js/project.js";
 import { Data } from "/assets/js/data.js";
 
 const jsonPath = "assets/js/data/projects.json";
-const data = new Data(jsonPath);
+const dataProjects = new Data(jsonPath);
 
-data.fetchData().then((getData) => {
+dataProjects.fetchData().then((getData) => {
   getData.forEach((element) => {
       const project = new Project(element.id, element.repository, element.picture, element.technology, element.subtitle, element.success);
       project.createProject();
