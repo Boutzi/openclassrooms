@@ -1,10 +1,10 @@
-import { Project } from "/assets/js/project.js";
-import { Technology } from "/assets/js/technology.js";
-import { Data } from "/assets/js/data.js";
+import { Project } from "./project.js";
+import { Technology } from "./technology.js";
+import { Data } from "./data.js";
 
 const jsonPath = [
-  "assets/js/data/projects.json",
-  "assets/js/data/technologies.json"
+  "./assets/js/data/projects.json",
+  "./assets/js/data/technologies.json"
 ];
 const dataProjects = new Data(jsonPath[0]);
 const dataTechnologies = new Data(jsonPath[1]);
