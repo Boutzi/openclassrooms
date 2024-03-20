@@ -11,7 +11,7 @@
     "id": 2,
     "repository": "integrateur-web/2_Riding-cities_270224/",
     "picture": "assets/images/p2.png",
-    "technology": ["html", "figma"],
+    "technology": ["figma", "html"],
     "subtitle": "Premiers pas sur le langage HTML",
     "success": true
   },
