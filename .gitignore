@@ -2,3 +2,4 @@ cours/
 .vscode
 *.todo
 *.psd
+node_modules/
