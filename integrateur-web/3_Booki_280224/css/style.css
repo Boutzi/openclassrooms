@@ -90,12 +90,12 @@ p {
 
 /****** Accomodations and Populars ***********/
 .hebergements-and-populaires {
-	display: flex;
 	justify-content: space-between;
+	display: flex;
 }
 
 .hebergements-and-populaires section {
-	background: var(--bg-gradient);
+    background-color: var(--main-bg-color);
 	border-radius: 20px;
 	padding: 30px;
 	box-sizing: border-box;

@@ -31,10 +31,6 @@
     justify-content: space-between;
   }
 
-  .populaires-cards .card {
-    margin: 0 15px;
-  }
-
   .populaires-cards a {
     width: 100%;
   }
@@ -226,7 +222,6 @@
 
   .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
     width: 100%;
   }
 
