@@ -4,7 +4,7 @@
     z-index: $z-index-dropdown;
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: $color-tertiary;
     opacity: 0;
     animation: loader 3000ms ease-out forwards 1;
