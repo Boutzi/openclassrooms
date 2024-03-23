@@ -33,6 +33,9 @@
         width: 100%;
         margin: 0 16px;
         left: -12px;
+        &:hover > .btn__logo, &:hover > .btn__title {
+            color: $color-primary;
+        }
     }
     &__order {
         position: absolute;
@@ -53,9 +56,6 @@
         text-align: center;
         width: 18px;
         color: $color-text-regular;
-        &--colored {
-            color: $color-primary;
-        }
     }
     &__title {
         margin-left: 24px;

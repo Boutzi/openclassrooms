@@ -143,14 +143,13 @@
 
   .section__filter {
     height: auto;
-    display: grid;
+    display: flex;
     gap: 25px;
-    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
   }
 
   .section__filter h2 {
     width: 100%;
-    grid-column: span 2;
   }
 
   .section__filter a {
@@ -159,6 +158,7 @@
     padding: 0;
     margin: 0;
     display: flex;
+    flex: 1 1 44%;
     align-items: center;
   }
 
@@ -238,7 +238,7 @@
   }
 
   .hebergements-cards {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   .activities__title {

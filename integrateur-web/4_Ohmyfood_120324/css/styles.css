@@ -76,9 +76,9 @@
     opacity: 1;
   }
   50% {
-    transform: scaleX(100%) scaleY(110%);
+    transform: scaleX(100%) scaleY(108%);
   }
-  100% {
+  90% {
     transform: scaleX(100%) scaleY(100%);
   }
 }
@@ -292,12 +292,13 @@ li {
   cursor: pointer;
 }
 .thumbnails .link__like-btn .fa-heart {
-  font-weight: 400;
+  font-weight: 100;
   background: #000000;
   font-size: 1.5rem;
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  transition: transform 300ms ease-in-out;
 }
 .thumbnails .link__like-btn .fa-heart:hover {
   font-weight: 700;
@@ -307,6 +308,7 @@ li {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  transform: scale(110%);
 }
 .thumbnails .link__like-btn .checked .fa-heart {
   font-weight: 700;
@@ -361,6 +363,9 @@ li {
   margin: 0 16px;
   left: -12px;
 }
+.btn--selection:hover > .btn__logo, .btn--selection:hover > .btn__title {
+  color: #9356DC;
+}
 .btn__order {
   position: absolute;
   left: -12px;
@@ -380,9 +385,6 @@ li {
   text-align: center;
   width: 18px;
   color: #7E7E7E;
-}
-.btn__logo--colored {
-  color: #9356DC;
 }
 .btn__title {
   margin-left: 24px;
@@ -611,6 +613,7 @@ li {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  transition: transform 300ms ease-in-out;
 }
 .menu .restaurant-menu__title .like-btn .fa-heart:hover {
   font-weight: 700;
@@ -620,6 +623,7 @@ li {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  transform: scale(110%);
 }
 .menu .restaurant-menu__title .like-btn .checked .fa-heart {
   font-weight: 700;

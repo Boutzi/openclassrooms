@@ -82,11 +82,11 @@ $animation-duration: 1500ms + ($total-letters * 100ms);
         opacity: 1;
     }
     50% {
-        transform: scaleX(100%) scaleY(110%);
+        transform: scaleX(100%) scaleY(108%);
     }
     75% {
     }
-    100% {
+    90% {
         transform: scaleX(100%) scaleY(100%);
     }
 }

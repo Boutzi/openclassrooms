@@ -5,8 +5,9 @@
   }
   
   .hebergements-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 33px;
   }
@@ -27,6 +28,7 @@
   .hebergements-cards a {
     display: flex;
     width: 100%;
+    flex: 0 1 calc(33.33% - 20px);
   }
   
   .hebergements-cards img {

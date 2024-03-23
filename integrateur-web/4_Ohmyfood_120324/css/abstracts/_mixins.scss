@@ -3,3 +3,29 @@
         &{ @content; }
     }
 }
+
+@mixin heart {
+    display: flex;
+    cursor: pointer;
+    & .fa-heart {
+        font-weight: $font-weight-thin; 
+        background: $color-pure-inverted;
+        font-size: $font-size-l;
+        background-clip:text;
+        color: transparent;
+        transition: transform 300ms ease-in-out;
+        &:hover {
+            font-weight: $font-weight-bold;
+            @include button-gradient-inverted;
+            background-clip:text;
+            color: transparent;
+            transform: scale(110%);
+        }
+    }
+    .checked .fa-heart {
+        font-weight: $font-weight-bold;
+        @include button-gradient-inverted;
+        background-clip:text;
+        color: transparent;
+    }
+}

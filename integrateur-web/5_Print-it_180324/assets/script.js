@@ -21,7 +21,7 @@ const slides = [
 const banner = document.getElementById("banner");
 let view = 0;
 
-let slide = document.createElement("img");
+const slide = document.createElement("img");
 slide.classList.add("banner-img");
 slide.src = `assets/images/slideshow/${slides[view].image}`;
 banner.appendChild(slide);
@@ -49,13 +49,13 @@ const arrowRight = document.querySelector(".arrow_right");
 function arrowClick(direction) {
 	dotSelected.classList.remove(`dot_selected`);
 	switch (direction) {
-		case "gauche":
+		case "left":
 			view--;
 			if (view < 0) {
 				view = slides.length - 1;
 			}
 			break;
-		case "droite":
+		case "right":
 			view++;
 			if (view > slides.length - 1) {
 				view = 0;
@@ -70,13 +70,13 @@ function arrowClick(direction) {
 }
 
 arrowLeft.addEventListener("click", () => {
-	arrowClick("gauche");
+	arrowClick("left");
 });
 arrowRight.addEventListener("click", () => {
-	arrowClick("droite");
+	arrowClick("right");
 });
 
-// Slideshow: DOTS Change - BONUS
+// Slideshow: DOTS click - BONUS
 function dotClick(selected) {
 	dotSelected.classList.remove(`dot_selected`);
 	slide.src = `assets/images/slideshow/${slides[selected].image}`;

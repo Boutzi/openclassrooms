@@ -90,30 +90,10 @@
             font-weight: $font-weight-light;
         }
         &__like-btn {
-            display: flex;
             position: absolute;
             bottom: 32px;
             right: 24px;
-            cursor: pointer;
-            & .fa-heart {
-                font-weight: $font-weight-regular; 
-                background: $color-pure-inverted;
-                font-size: $font-size-l;
-                background-clip:text;
-                color: transparent;
-                &:hover {
-                    font-weight: $font-weight-bold;
-                    @include button-gradient-inverted;
-                    background-clip:text;
-                    color: transparent;
-                }
-            }
-            .checked .fa-heart {
-                font-weight: $font-weight-bold;
-                @include button-gradient-inverted;
-                background-clip:text;
-                color: transparent;
-            }
+            @include heart;
         }
     }
     
