@@ -42,7 +42,7 @@
   {
     "id": 6,
     "repository": "integrateur-web/6_Sophie-Bluel_190324/FrontEnd",
-    "picture": "assets/images/p0.png",
+    "picture": "assets/images/p6.png",
     "technology": ["powershell", "npm", "swagger","postman"],
     "subtitle": "Créez une page web dynamique avec JavaScript",
     "success": false
