@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background: #FFFEF8;
 }
 ol, ul {
 	list-style: none;
@@ -47,7 +48,7 @@ table {
 	border-spacing: 0;
 }
 /** end reset css**/
-body {
+.content {
 	max-width: 1140px;
 	margin:auto;
 	font-family: 'Work Sans' ;
@@ -93,6 +94,14 @@ nav ul {
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+}
+
+.navlink {
+	text-decoration: none;
+}
+
+.navlink:visited {
+	color: inherit;
 }
 
 li:hover {
@@ -156,7 +165,7 @@ margin: auto;
 }
 
 #contact input {
-	height: 50px;
+	padding: 18px;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
@@ -186,3 +195,119 @@ footer nav ul {
 	margin: 2em
 }
 
+/* Gallery Filters */
+
+.works-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.filters {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+.filters__item {
+	display: flex;
+	border: 1px solid #1D6154;
+	padding: 8px 20px;
+	border-radius: 20px;
+	color: #1D6154;
+	font-weight: 600;
+}
+.filters__item:hover {
+	background: #1D6154;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.filters--checked {
+	background: #1D6154;
+	color: #FFF;
+}
+/* Login Page */
+
+#login {
+	width: 50%;
+	margin: auto;
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+    text-align: left;
+}
+
+.login h2 {
+    text-align: center;
+	margin: 30px 0;
+}
+
+.login label {
+	margin:2em 0 1em 0;
+}
+
+#email, #password {
+	display: flex;
+	padding: 18px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#submit {
+	padding: 8px;
+	cursor: pointer;
+	box-sizing: border-box;
+	border: none;
+}
+
+.login .forgot {
+    text-align: center;
+}
+
+.login  a {
+	color: inherit;
+}
+.login  a:hover {
+	text-decoration: none;
+}
+
+
+/* ADMIN Panel */
+
+.admin-panel {
+position: fixed;
+top:0;
+display: flex;
+height: 59px;
+width: 100%;
+justify-content: center;
+align-items: center;
+color: white;
+font-family: sans-serif;
+background-color: black;
+}
+
+.connected {
+	margin-top: 80px;
+	cursor: pointer;
+}
+
+.not-visible {
+	display: none;
+}
+
+.modify-works {
+	font-size: 0.9rem;
+	margin-left: 30px;
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+.modify-works:visited {
+	color: inherit;
+}
