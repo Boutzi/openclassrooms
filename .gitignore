@@ -1,5 +1,7 @@
 cours/
+node_modules/
 .vscode
 *.todo
 *.psd
-node_modules/
+*.zip
+*.txt
