@@ -28,9 +28,9 @@ if (token) {
     });
 }
 
-const works = await fetch("https://sophie-bluel-api-5461e3d9daac.herokuapp.com/api/works").then((response) => response.json());
+const works = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/works").then((response) => response.json());
 
-const categories = await fetch("https://sophie-bluel-api-5461e3d9daac.herokuapp.com/api/categories").then((response) =>
+const categories = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/categories").then((response) =>
   response.json()
 );
 
