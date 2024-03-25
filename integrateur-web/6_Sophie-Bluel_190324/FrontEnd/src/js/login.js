@@ -10,7 +10,7 @@ async function connect() {
     //transform object to json
     const payload = JSON.stringify(userInfos);
     //create POST request with data
-    const user = await fetch("http://localhost:5678/api/users/login", {
+    const user = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: payload,
