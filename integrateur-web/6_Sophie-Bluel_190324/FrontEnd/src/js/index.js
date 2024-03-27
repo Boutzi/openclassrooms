@@ -1,4 +1,10 @@
-import { openModal } from "./modal.js";
+import { openModalThenGenerateWorks } from "./modal.js";
+
+export const works = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/works").then((response) => response.json());
+
+const categories = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/categories").then((response) =>
+  response.json()
+);
 
 const token = window.localStorage.getItem("token");
 if (token) {
@@ -27,16 +33,9 @@ if (token) {
         window.location.href = "./";
     });
     document.querySelectorAll(".modify-works").forEach(a => {
-        a.addEventListener("click", openModal);
+        a.addEventListener("click", openModalThenGenerateWorks);
       });
 }
-
-
-const works = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/works").then((response) => response.json());
-
-const categories = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/categories").then((response) =>
-  response.json()
-);
 
 function generateWorks(work) {
   const gallery = document.querySelector(".gallery");
@@ -108,3 +107,4 @@ function filterIsChecked() {
 }
 generateWorks(works);
 generateFilters(categories);
+

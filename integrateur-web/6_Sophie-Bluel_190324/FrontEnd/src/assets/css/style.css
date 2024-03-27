@@ -346,14 +346,79 @@ background-color: black;
 .modal-wrapper {
 	overflow: auto;
 	width: 630px;
-	max-width: calc(100vw - 20px);
-	max-height: calc(100vh - 20px);
+	max-width: calc(100vw - 30px);
+	max-height: calc(100vh - 30px);
 	min-height: 200px;
-	padding: 20px;
+	padding: 30px;
 	background: #F1F1F1;
 	border-radius: 10px;
 	box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 	animation: slideFromBottom 300ms both 50ms;
+}
+.modal-wrapper__head {
+	text-align: center;
+}
+.modal-wrapper__head h2 {
+	margin-block: 10px 50px;
+}
+
+.modal-wrapper__close {
+	text-align: right;
+}
+
+.js-modal-close {
+	border:none;
+	font-size: 1.2rem;
+}
+
+.js-modal-close:hover {
+	cursor:pointer;
+	color: #555;
+}
+
+.modal-wrapper__content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 30px auto;
+	width: 75%;
+	gap:10px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #B3B3B3;
+}
+
+.modal-wrapper__content figure {
+	display: flex;
+	height: 100px;
+	position: relative;
+}
+
+.modal-wrapper__footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add-photo {
+	display: flex;
+	border: none;
+	padding: 8px 20px;
+	border-radius: 20px;
+	background: #1D6154;
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.delete-button {
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	cursor: pointer;
 }
 
 @keyframes fadeIn {

@@ -1,7 +1,15 @@
+import { works } from "../js/index.js";
+
 let modal = null;
 const focusSelector = "button, a, input, textarea, select";
 let focusables = [];
 let previouslyFocused = null;
+
+export async function openModalThenGenerateWorks(e) {
+    e.preventDefault;
+    await openModal(e);
+    generateEdition(works);
+}
 
 export const openModal = async function (e) {
     e.preventDefault();
@@ -75,3 +83,42 @@ window.addEventListener("keydown", (e) => {
         focusInModal(e);
     }
 })
+
+function generateEdition(edit) {
+    const gallery = document.querySelector(".modal-wrapper__content");
+    for (let i = 0; i < edit.length; i++) {
+      const figure = edit[i];
+      const galleryFigure = document.createElement("figure");
+      const galleryImg = document.createElement("img");
+      const deleteButton = document.createElement("img")
+      deleteButton.setAttribute("src", "./src/assets/icons/bin.svg")
+      deleteButton.classList.add("delete-button");
+      deleteButton.addEventListener("click", () => {
+        console.log(`image ${i + 1} supprimée`) // CONSOLE LOG A DELETE
+        });
+      galleryImg.setAttribute("src", figure.imageUrl);
+      galleryImg.setAttribute("alt", figure.title);
+      gallery.appendChild(galleryFigure);
+      galleryFigure.appendChild(galleryImg);
+      galleryFigure.appendChild(deleteButton);
+    }
+    const headDiv = document.querySelector(".modal-wrapper__head");
+    const addPhotoTitle = document.createElement("h2");
+    addPhotoTitle.setAttribute("id", "modal-title");
+    addPhotoTitle.innerText = "Galerie Photo";
+    const footerDiv = document.querySelector(".modal-wrapper__footer");
+    const addPhotoButton = document.createElement("button");
+    addPhotoButton.classList.add("add-photo");
+    addPhotoButton.innerText = "Ajouter une photo";
+    addPhotoButton.addEventListener("click", () => {
+        addPhoto(addPhotoTitle, addPhotoButton);
+    });
+    headDiv.appendChild(addPhotoTitle);
+    footerDiv.appendChild(addPhotoButton);
+  }
+
+function addPhoto(title, button) {
+    console.log("new state"); // CONSOLE LOG A DELETE
+    title.innerText = "Ajout photo";
+    button.innerText = "Valider";
+}
