@@ -10,14 +10,29 @@ async function connect() {
     //transform object to json
     const payload = JSON.stringify(userInfos);
     //create POST request with data
-    const user = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/users/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: payload,
-    })
-    .then(response => response.json());
-    window.localStorage.setItem("token", user.token);
-    window.location.href = "../../"
+    try {
+      const response = await fetch(
+        "https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/users/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: payload,
+        }
+      );
+
+      if (response.ok) {
+        const user = await response.json();
+        window.localStorage.setItem("token", user.token);
+        window.location.href = "../../";
+      } else if (response.status === 401) {
+        const loginError = document.getElementById("login-error");
+        loginError.style.visibility = "visible";
+      } else {
+        console.error("Erreur lors de la tentative de connexion:", response.status);
+      }
+    } catch (error) {
+      console.error("Une erreur s'est produite :", error);
+    }
   });
 }
 connect();

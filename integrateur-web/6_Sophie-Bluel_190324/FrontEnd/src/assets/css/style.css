@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+* {
+	box-sizing: border-box;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -63,7 +67,11 @@ section {
 	margin: 50px 0
 }
 
-h1{
+a {
+	color: inherit;
+}
+
+h1 {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Syne';
@@ -243,7 +251,7 @@ footer nav ul {
 
 .login h2 {
     text-align: center;
-	margin: 30px 0;
+	margin: 15px 0;
 }
 
 .login label {
@@ -259,7 +267,7 @@ footer nav ul {
 }
 
 #submit {
-	padding: 8px;
+	padding: 10px;
 	cursor: pointer;
 	box-sizing: border-box;
 	border: none;
@@ -310,4 +318,58 @@ background-color: black;
 }
 .modify-works:visited {
 	color: inherit;
+}
+
+#login-error {
+	text-align: center;
+	visibility: hidden;
+	font-size: 1.1rem;
+	color: red;
+	margin: 15px 0;
+}
+
+/* MODAL */
+
+.modal {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	animation: fadeIn 300ms both;
+}
+
+.modal-wrapper {
+	overflow: auto;
+	width: 630px;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh - 20px);
+	min-height: 200px;
+	padding: 20px;
+	background: #F1F1F1;
+	border-radius: 10px;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+	animation: slideFromBottom 300ms both 50ms;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideFromBottom {
+	from {
+		transform: translateY(50px);
+	}
+	to {
+		transform: translateY(0px);
+	}
 }

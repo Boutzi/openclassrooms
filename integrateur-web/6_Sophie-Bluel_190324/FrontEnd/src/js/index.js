@@ -1,4 +1,4 @@
-// import { connect } from "./login.js";
+import { openModal } from "./modal.js";
 
 const token = window.localStorage.getItem("token");
 if (token) {
@@ -16,7 +16,7 @@ if (token) {
     const worksH2 = document.querySelector(".works-title");
     const modify = document.createElement("a");
     modify.classList.add("modify-works");
-    modify.setAttribute("href", "");
+    modify.setAttribute("href", "./src/pages/modal.html#edit");
     modify.innerText = "Modifier"
     worksH2.appendChild(modify);
     const logMode = document.getElementById("logMode");
@@ -26,29 +26,17 @@ if (token) {
         window.localStorage.removeItem("token");
         window.location.href = "./";
     });
+    document.querySelectorAll(".modify-works").forEach(a => {
+        a.addEventListener("click", openModal);
+      });
 }
+
 
 const works = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/works").then((response) => response.json());
 
 const categories = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/categories").then((response) =>
   response.json()
 );
-
-// async function fetchAPI (type) {
-//     let result;
-//     switch (type) {
-//         case "works":
-//             result = await fetch("http://localhost:5678/api/works")
-//             .then(response => response.json())
-//             return result;
-//         case "categories":
-//             result = await fetch("http://localhost:5678/api/categories")
-//             .then(response => response.json())
-//             return result;
-//         default:
-//             break;
-//     }
-// }
 
 function generateWorks(work) {
   const gallery = document.querySelector(".gallery");
