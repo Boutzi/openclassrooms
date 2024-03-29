@@ -1,0 +1,25 @@
+<div class="modal-wrapper__close">
+  <button class="js-modal-close" aria-label="Fermer la boite modale">&#10006;</button>
+</div>
+<form id="uploadNewWork" method="post">
+  <div class="modal-wrapper__head">
+    <h2>Ajout Photo</h2>
+  </div>
+  <div class="modal-wrapper__content">
+    <div class="upload-area">
+      <img src="src/assets/icons/img.png" alt="icone d'une image générique">
+      <button class="get-file" onclick="document.getElementById('getFile').click()">+ Ajouter photo</button>
+      <input type='file' id="getFile" style="display:none" accept="image/jpg, image/jpeg, image/png">
+      <p>jpg, png : 4mo max</p>
+    </div>
+    <div class="upload-config">
+      <label>Titre</label>
+      <input type="text" name="title" id="title">
+      <label>Catégorie</label>
+      <select></select>
+    </div>
+  </div>
+  <div class="modal-wrapper__footer">
+    <button type="submit" class="add-photo">Valider</button>
+  </div>
+</form>

@@ -1,4 +1,4 @@
-import { works } from "../js/index.js";
+import { works } from "./index.js";
 
 let modal = null;
 const focusSelector = "button, a, input, textarea, select";
@@ -84,6 +84,8 @@ window.addEventListener("keydown", (e) => {
     }
 })
 
+const gallery = document.querySelector(".modal-wrapper__content");
+
 function generateEdition(edit) {
     const gallery = document.querySelector(".modal-wrapper__content");
     for (let i = 0; i < edit.length; i++) {
@@ -111,14 +113,22 @@ function generateEdition(edit) {
     addPhotoButton.classList.add("add-photo");
     addPhotoButton.innerText = "Ajouter une photo";
     addPhotoButton.addEventListener("click", () => {
-        addPhoto(addPhotoTitle, addPhotoButton);
+        addPhoto();
     });
     headDiv.appendChild(addPhotoTitle);
     footerDiv.appendChild(addPhotoButton);
   }
 
-function addPhoto(title, button) {
-    console.log("new state"); // CONSOLE LOG A DELETE
-    title.innerText = "Ajout photo";
-    button.innerText = "Valider";
+async function addPhoto() {
+    const modalWrapper = document.querySelector(".modal-wrapper");
+    await loadEdition(modalWrapper);
+    const gallery = document.querySelector(".modal-wrapper__content");
+    const uploadArea = document.createElement("div");
+    uploadArea.classList.add("upload-area");
+}
+
+async function loadEdition(target) {
+    target.innerHTML = "";
+    const html = await fetch("./src/pages/edit.html").then(response => response.text());
+    target.innerHTML = html;
 }

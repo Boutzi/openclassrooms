@@ -438,3 +438,76 @@ background-color: black;
 		transform: translateY(0px);
 	}
 }
+
+/* EDITVIEW */
+
+.upload-area {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background: #E8F1F6;
+	border-radius: 3px;
+}
+.upload-area img {
+	display: flex;
+	width: 76px;
+	height: 76px;
+	margin-block: 10px;
+}
+.upload-area .get-file {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #CBD6DC;
+	width:173px;
+	height:36px;
+	border-radius: 50px;
+	box-sizing: border-box;
+	border: none;
+	margin-bottom: 10px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.upload-area .get-file:hover {
+	background: #306685;
+}
+
+.upload-area p {
+	display: flex;
+	margin-bottom: 20px;
+	font-size: 0.9rem;
+}
+
+.upload-config {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#uploadNewWork > * {
+	text-align: center;
+}
+
+#uploadNewWork h2{
+	margin-bottom: 20px;
+}
+
+.upload-config {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.upload-config input, .upload-config select {
+	padding: 18px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.upload-config label {
+	margin: 2em 0 1em 0;
+}
