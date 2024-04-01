@@ -1,4 +1,5 @@
 import { works } from "./index.js";
+import { database } from "./index.js";
 
 let modal = null;
 const focusSelector = "button, a, input, textarea, select";
@@ -96,7 +97,7 @@ function generateEdition(edit) {
       deleteButton.setAttribute("src", "./src/assets/icons/bin.svg")
       deleteButton.classList.add("delete-button");
       deleteButton.addEventListener("click", () => {
-        console.log(`image ${i + 1} supprimée`) // CONSOLE LOG A DELETE
+        removePhoto(edit[i].id);
         });
       galleryImg.setAttribute("src", figure.imageUrl);
       galleryImg.setAttribute("alt", figure.title);
@@ -131,4 +132,15 @@ async function loadEdition(target) {
     target.innerHTML = "";
     const html = await fetch("./src/pages/edit.html").then(response => response.text());
     target.innerHTML = html;
+}
+
+async function removePhoto(index) {
+    await fetch(`${database}/works/${index}`, {
+        method: "DELETE",
+        headers: { 
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${window.localStorage.getItem("token")}` 
+        }
+    })
 }

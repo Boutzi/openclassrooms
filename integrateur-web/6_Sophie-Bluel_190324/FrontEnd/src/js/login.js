@@ -1,3 +1,5 @@
+import { database } from "./index.js";
+
 async function connect() {
   const loginQuery = document.querySelector(".login");
   loginQuery.addEventListener("submit", async (event) => {
@@ -12,7 +14,7 @@ async function connect() {
     //create POST request with data
     try {
       const response = await fetch(
-        "https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/users/login",
+        database + "/users/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -23,6 +25,7 @@ async function connect() {
       if (response.ok) {
         const user = await response.json();
         window.localStorage.setItem("token", user.token);
+        window.localStorage.setItem("userId", user.userId);
         window.location.href = "../../";
       } else if (response.status === 401) {
         const loginError = document.getElementById("login-error");

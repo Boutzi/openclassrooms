@@ -1,8 +1,11 @@
 import { openModalThenGenerateWorks } from "./modal.js";
 
-export const works = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/works").then((response) => response.json());
+// export const database = "http://localhost:5678/api";
+export const database = "https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api";
 
-const categories = await fetch("https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api/categories").then((response) =>
+export const works = await fetch(database + "/works").then((response) => response.json());
+
+const categories = await fetch(database + "/categories").then((response) =>
   response.json()
 );
 
@@ -81,14 +84,6 @@ function listenerFilters(filter, id) {
 }
 
 function filterOnClick(id) {
-  // const worksFiltered = await fetchAPI("works");
-  // console.log(worksFiltered);
-  // worksFiltered.filter(data =>
-  //     id === 0 || data.categoryId == id
-  // );
-  // document.querySelector(".gallery").innerHTML = "";
-  // generateWorks(worksFiltered);
-
   const worksFiltered = works.filter((data) => id === 0 || data.categoryId == id);
   document.querySelector(".gallery").innerHTML = "";
   generateWorks(worksFiltered);
