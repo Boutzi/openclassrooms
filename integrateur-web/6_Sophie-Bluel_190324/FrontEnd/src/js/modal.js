@@ -1,5 +1,5 @@
 import { works } from "./index.js";
-import { database } from "./index.js";
+import { api } from "./index.js";
 
 let modal = null;
 const focusSelector = "button, a, input, textarea, select";
@@ -135,7 +135,7 @@ async function loadEdition(target) {
 }
 
 async function removePhoto(index) {
-    await fetch(`${database}/works/${index}`, {
+    await fetch(`${api}/works/${index}`, {
         method: "DELETE",
         headers: { 
             "Accept": "application/json",

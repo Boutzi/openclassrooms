@@ -1,11 +1,11 @@
 import { openModalThenGenerateWorks } from "./modal.js";
 
-// export const database = "http://localhost:5678/api";
-export const database = "https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api";
+// export const api = "http://localhost:5678/api";
+export const api = "https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api";
 
-export const works = await fetch(database + "/works").then((response) => response.json());
+export const works = await fetch(api + "/works").then((response) => response.json());
 
-const categories = await fetch(database + "/categories").then((response) =>
+const categories = await fetch(api + "/categories").then((response) =>
   response.json()
 );
 

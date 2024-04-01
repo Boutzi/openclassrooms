@@ -1,4 +1,4 @@
-import { database } from "./index.js";
+import { api } from "./index.js";
 
 async function connect() {
   const loginQuery = document.querySelector(".login");
@@ -14,7 +14,7 @@ async function connect() {
     //create POST request with data
     try {
       const response = await fetch(
-        database + "/users/login",
+        api + "/users/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
