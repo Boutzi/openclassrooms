@@ -308,7 +308,7 @@ li {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  transform: scale(110%);
+  transform: scale(1.1);
 }
 .thumbnails .link__like-btn .checked .fa-heart {
   font-weight: 700;
@@ -623,7 +623,7 @@ li {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  transform: scale(110%);
+  transform: scale(1.1);
 }
 .menu .restaurant-menu__title .like-btn .checked .fa-heart {
   font-weight: 700;
