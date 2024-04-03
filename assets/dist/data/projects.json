@@ -29,7 +29,7 @@
     "picture": "assets/images/p4.png",
     "technology": ["sass", "git", "github"],
     "subtitle": "Améliorez l'interface d'un site mobile avec des animations CSS",
-    "success": false
+    "success": true
   },
   {
     "id": 5,
