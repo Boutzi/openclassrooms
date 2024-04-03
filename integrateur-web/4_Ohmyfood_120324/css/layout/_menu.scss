@@ -41,9 +41,7 @@
         }
         @for $i from 1 through 3 {
             .cat-#{$i} {
-                opacity: 0;
                 animation: display-menu 2s ease-in ($i * 700ms);
-                animation-fill-mode: forwards;
             }
         }
         .category {
@@ -51,7 +49,9 @@
             flex-direction: column;
             width: 94%;
             margin: 30px auto 0 auto;
+            opacity: 0;
             transform-origin: top left;
+            animation-fill-mode: forwards;
             &__title {
                 width: 40px;
                 font-size: $font-size-s;

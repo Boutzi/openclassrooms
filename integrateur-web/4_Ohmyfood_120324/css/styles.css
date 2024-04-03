@@ -81,6 +81,9 @@
   90% {
     transform: scaleX(1) scaleY(1);
   }
+  100% {
+    opacity: 1;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -635,26 +638,22 @@ li {
   color: transparent;
 }
 .menu .restaurant-menu .cat-1 {
-  opacity: 0;
   animation: display-menu 2s ease-in 700ms;
-  animation-fill-mode: forwards;
 }
 .menu .restaurant-menu .cat-2 {
-  opacity: 0;
   animation: display-menu 2s ease-in 1400ms;
-  animation-fill-mode: forwards;
 }
 .menu .restaurant-menu .cat-3 {
-  opacity: 0;
   animation: display-menu 2s ease-in 2100ms;
-  animation-fill-mode: forwards;
 }
 .menu .restaurant-menu .category {
   display: flex;
   flex-direction: column;
   width: 94%;
   margin: 30px auto 0 auto;
+  opacity: 0;
   transform-origin: top left;
+  animation-fill-mode: forwards;
 }
 .menu .restaurant-menu .category__title {
   width: 40px;
