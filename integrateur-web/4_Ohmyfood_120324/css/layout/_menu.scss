@@ -41,6 +41,7 @@
         }
         @for $i from 1 through 3 {
             .cat-#{$i} {
+                opacity: 0;
                 animation: display-menu 2s ease-in ($i * 700ms);
                 animation-fill-mode: forwards;
             }

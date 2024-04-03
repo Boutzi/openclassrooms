@@ -635,14 +635,17 @@ li {
   color: transparent;
 }
 .menu .restaurant-menu .cat-1 {
+  opacity: 0;
   animation: display-menu 2s ease-in 700ms;
   animation-fill-mode: forwards;
 }
 .menu .restaurant-menu .cat-2 {
+  opacity: 0;
   animation: display-menu 2s ease-in 1400ms;
   animation-fill-mode: forwards;
 }
 .menu .restaurant-menu .cat-3 {
+  opacity: 0;
   animation: display-menu 2s ease-in 2100ms;
   animation-fill-mode: forwards;
 }
