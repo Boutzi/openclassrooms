@@ -28,10 +28,3 @@ $scrollbar-thumb:#7E7E7E;
     background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 97%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
 }
-@mixin button-gradient-inverted {
-    background: rgb(147,86,220);
-    background: -moz-linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 97%);
-    background: -webkit-linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 97%);
-    background: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 97%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-}

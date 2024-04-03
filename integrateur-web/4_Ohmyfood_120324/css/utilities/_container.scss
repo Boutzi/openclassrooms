@@ -93,7 +93,7 @@
             position: absolute;
             bottom: 32px;
             right: 24px;
-            @include heart;
+            @include heart($font-weight-thin, $color-pure-inverted, $font-size-l, $font-weight-bold);
         }
     }
     

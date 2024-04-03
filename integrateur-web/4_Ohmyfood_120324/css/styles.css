@@ -24,26 +24,26 @@
 @keyframes loader__letters {
   0% {
     opacity: 1;
-    transform: scaleY(100%);
+    transform: scaleY(1);
   }
   20% {
     opacity: 1;
-    transform: scaleY(120%);
+    transform: scaleY(1.2);
   }
   40% {
     opacity: 1;
-    transform: scaleY(100%);
+    transform: scaleY(1);
   }
   60% {
     opacity: 1;
-    transform: scaleY(120%);
+    transform: scaleY(1.2);
   }
   80% {
-    transform: scaleY(100%);
+    transform: scaleY(1);
     opacity: 0;
   }
   100% {
-    transform: scaleY(0%);
+    transform: scaleY(0);
   }
 }
 @keyframes loader__bar {
@@ -70,16 +70,16 @@
 @keyframes display-menu {
   0% {
     opacity: 0;
-    transform: scaleX(100%) scaleY(50%);
+    transform: scaleX(1) scaleY(0.5);
   }
   25% {
     opacity: 1;
   }
   50% {
-    transform: scaleX(100%) scaleY(108%);
+    transform: scaleX(1) scaleY(1.08);
   }
   90% {
-    transform: scaleX(100%) scaleY(100%);
+    transform: scaleX(1) scaleY(1);
   }
 }
 html {
@@ -285,10 +285,10 @@ li {
   font-weight: 300;
 }
 .thumbnails .link__like-btn {
-  display: flex;
   position: absolute;
   bottom: 32px;
   right: 24px;
+  display: flex;
   cursor: pointer;
 }
 .thumbnails .link__like-btn .fa-heart {
@@ -602,12 +602,12 @@ li {
   align-items: center;
 }
 .menu .restaurant-menu__title .like-btn {
-  display: flex;
   margin-left: 32px;
+  display: flex;
   cursor: pointer;
 }
 .menu .restaurant-menu__title .like-btn .fa-heart {
-  font-weight: 400;
+  font-weight: 100;
   background: #000000;
   font-size: 1.5rem;
   -webkit-background-clip: text;

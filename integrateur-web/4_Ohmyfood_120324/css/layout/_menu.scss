@@ -36,7 +36,7 @@
             align-items: center;
             .like-btn {
                 margin-left: 32px;
-                @include heart;
+                @include heart($font-weight-thin, $color-pure-inverted, $font-size-l, $font-weight-bold);
             }
         }
         .category {
