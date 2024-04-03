@@ -44,7 +44,7 @@
   }
   100% {
     transform: scaleY(0%);
-  };
+  }
 }
 @keyframes loader__bar {
   0% {

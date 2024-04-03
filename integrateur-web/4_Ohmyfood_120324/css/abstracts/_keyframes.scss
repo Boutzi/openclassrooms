@@ -28,28 +28,29 @@ $animation-duration: 1500ms + ($total-letters * 100ms);
 @keyframes loader__letters {
     0% {
         opacity: 1;
-        transform: scaleY(100%);
+        transform: scaleY(1);
     }
     20% {
         opacity: 1;
-        transform: scaleY(120%);
+        transform: scaleY(1.2);
     }
     40% {
         opacity: 1;
-        transform: scaleY(100%);
+        transform: scaleY(1);
     }
     60% {
         opacity: 1;
-        transform: scaleY(120%);
+        transform: scaleY(1.2);
     }
     80% {
-        transform: scaleY(100%);
+        transform: scaleY(1);
         opacity: 0;
     }
     100% {
-        transform: scaleY(0%);
+        transform: scaleY(0);
     }
 }
+
 
 @keyframes loader__bar {
     0% {
@@ -76,17 +77,17 @@ $animation-duration: 1500ms + ($total-letters * 100ms);
 @keyframes display-menu {
     0% {
         opacity: 0;
-        transform: scaleX(100%) scaleY(50%);
+        transform: scaleX(1) scaleY(0.5);
     }
     25% {
         opacity: 1;
     }
     50% {
-        transform: scaleX(100%) scaleY(108%);
+        transform: scaleX(1) scaleY(1.08);
     }
     75% {
     }
     90% {
-        transform: scaleX(100%) scaleY(100%);
+        transform: scaleX(1) scaleY(1);
     }
 }
