@@ -639,8 +639,16 @@ li {
   flex-direction: column;
   width: 94%;
   margin: 30px auto 0 auto;
-  animation: display-menu 2s ease-in-out;
   transform-origin: top left;
+}
+.menu .restaurant-menu .category .cat-1 {
+  animation: display-menu 2s ease-in-out 500ms;
+}
+.menu .restaurant-menu .category .cat-2 {
+  animation: display-menu 2s ease-in-out 1000ms;
+}
+.menu .restaurant-menu .category .cat-3 {
+  animation: display-menu 2s ease-in-out 1500ms;
 }
 .menu .restaurant-menu .category__title {
   width: 40px;

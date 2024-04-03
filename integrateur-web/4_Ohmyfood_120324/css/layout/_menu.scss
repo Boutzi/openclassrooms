@@ -44,7 +44,11 @@
             flex-direction: column;
             width: 94%;
             margin: 30px auto 0 auto;
-            animation: display-menu 2s ease-in-out;
+            @for $i from 1 through 3 {
+                .cat-#{$i} {
+                    animation: display-menu 2s ease-in-out ($i * 500ms);
+                }
+            }
             transform-origin: top left;
             &__title {
                 width: 40px;
