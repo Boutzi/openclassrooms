@@ -46,5 +46,13 @@
     "technology": ["powershell", "npm", "swagger","postman"],
     "subtitle": "Créez une page web dynamique avec JavaScript",
     "success": false
+  },
+  {
+    "id": 7,
+    "repository": "#",
+    "picture": "assets/images/p0.png",
+    "technology": ["react"],
+    "subtitle": "Créez une application web de location immobilière avec React",
+    "success": false
   }
 ]
