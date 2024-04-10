@@ -1,16 +1,19 @@
-import { openModalThenGenerateWorks } from "./modal.js";
+import { fetchModal, openModal } from "./modal.js";
+import { api } from "./variables.js";
+import { AuthService } from "./authService.js";
+import { BackendService } from "./backendService.js";
 
-// export const api = "http://localhost:5678/api";
-export const api = "https://sophie-bluel-api-aa2d8b8c980b.herokuapp.com/api";
+const authServiceInstance = new AuthService(api);
+const backendServiceInstance = new BackendService(api);
 
-export const works = await fetch(api + "/works").then((response) => response.json());
+const works = await backendServiceInstance.getWorks();
+const categories = await backendServiceInstance.getCategories();
 
-const categories = await fetch(api + "/categories").then((response) =>
-  response.json()
-);
+let modal = null;
 
 const token = window.localStorage.getItem("token");
 if (token) {
+  // create top edition bar
     const bodyChild = document.body.bodyChild;
     const header = document.querySelector(".header");
     header.classList.add("connected");
@@ -20,60 +23,70 @@ if (token) {
     adminPanel.classList.add("admin-panel");
     document.body.insertBefore(adminPanel, bodyChild);
     adminPanel.appendChild(adminContent);
+    // hide filters
     const hideFilters = document.querySelector(".filters");
     hideFilters.classList.add("not-visible");
+    // create "edit" link on H2
     const worksH2 = document.querySelector(".works-title");
     const modify = document.createElement("a");
     modify.classList.add("modify-works");
     modify.setAttribute("href", "./src/pages/modal.html#edit");
     modify.innerText = "Modifier"
     worksH2.appendChild(modify);
+    // change login for logout
     const logMode = document.getElementById("logMode");
     logMode.innerText = "logout";
     logMode.removeAttribute("href");
     logMode.addEventListener("click", () => {
-        window.localStorage.removeItem("token");
-        window.location.href = "./";
+      authServiceInstance.disconnect();
     });
+    // listener openModal
+    fetchModal("./src/pages/modal.html")
     document.querySelectorAll(".modify-works").forEach(a => {
-        a.addEventListener("click", openModalThenGenerateWorks);
+        a.addEventListener("click", async (e) => {
+          openModal();
+          console.log("toto");
+        });
       });
 }
 
-function generateWorks(work) {
-  const gallery = document.querySelector(".gallery");
-  for (let i = 0; i < work.length; i++) {
-    const figure = work[i];
-    const galleryFigure = document.createElement("figure");
-    const galleryImg = document.createElement("img");
-    const galleryFigcaption = document.createElement("figcaption");
-    galleryImg.setAttribute("src", figure.imageUrl);
-    galleryImg.setAttribute("alt", figure.title);
-    galleryFigcaption.innerText = figure.title;
-    gallery.appendChild(galleryFigure);
-    galleryFigure.appendChild(galleryImg);
-    galleryFigure.appendChild(galleryFigcaption);
+function generateWorks(works) {
+  for (let i = 0; i < works.length; i++) {
+    generateFigure(works[i])
   }
 }
 
+function generateFigure(figure) {
+  const gallery = document.querySelector(".gallery");
+  const galleryFigure = document.createElement("figure");
+  const galleryImg = document.createElement("img");
+  const galleryFigcaption = document.createElement("figcaption");
+  galleryImg.setAttribute("src", figure.imageUrl);
+  galleryImg.setAttribute("alt", figure.title);
+  galleryFigcaption.innerText = figure.title;
+  gallery.appendChild(galleryFigure);
+  galleryFigure.appendChild(galleryImg);
+  galleryFigure.appendChild(galleryFigcaption);
+}
+
 function generateFilters(category) {
-  const ul = document.querySelector(".filters");
-  const liAll = document.createElement("li");
-  liAll.classList.add("filters__item");
-  liAll.classList.add(`cat0`);
-  liAll.classList.add("filters--checked");
-  liAll.innerText = "Tous";
-  ul.appendChild(liAll);
+  createFilter(0, "Tous", true);
   for (let i = 0; i < category.length; i++) {
-    const filter = category[i];
-    const li = document.createElement("li");
-    li.classList.add("filters__item");
-    li.classList.add(`cat${filter.id}`);
-    li.innerText = filter.name;
-    ul.appendChild(li);
-    listenerFilters(li, filter.id);
+    createFilter(category[i].id, category[i].name);
   }
-  listenerFilters(liAll, 0);
+}
+
+function createFilter(id, name, isChecked = false) {
+  const ul = document.querySelector(".filters");
+  const li = document.createElement("li");
+  li.classList.add("filters__item");
+  li.classList.add(`cat${id}`);
+  if (isChecked) {
+    li.classList.add("filters--checked");
+  }
+  li.innerText = name;
+  ul.appendChild(li);
+  listenerFilters(li, id);
 }
 
 function listenerFilters(filter, id) {

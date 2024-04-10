@@ -7,16 +7,23 @@
   </div>
   <div class="modal-wrapper__content">
     <div class="upload-area">
-      <img src="src/assets/icons/img.png" alt="icone d'une image générique">
-      <button class="get-file" onclick="document.getElementById('getFile').click()">+ Ajouter photo</button>
-      <input type='file' id="getFile" style="display:none" accept="image/jpg, image/jpeg, image/png">
+      <img src="src/assets/icons/img.png" alt="icone d'une image générique" />
+        <label for="getFile">+ Ajouter Photo</label>
+        <input
+          type="file"
+          id="getFile"
+          style="display: none"
+          accept="image/jpg, image/jpeg, image/png"
+        />
       <p>jpg, png : 4mo max</p>
     </div>
     <div class="upload-config">
       <label>Titre</label>
-      <input type="text" name="title" id="title">
-      <label>Catégorie</label>
-      <select></select>
+      <input type="text" name="title" id="title" />
+      <label for="categories">Catégorie</label>
+      <select id="categories" name="categories">
+      </select>
+      
     </div>
   </div>
   <div class="modal-wrapper__footer">

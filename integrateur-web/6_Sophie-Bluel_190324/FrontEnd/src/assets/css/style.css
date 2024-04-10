@@ -511,3 +511,7 @@ background-color: black;
 .upload-config label {
 	margin: 2em 0 1em 0;
 }
+
+input[type="file"] {
+    display: none;
+}
