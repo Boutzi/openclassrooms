@@ -1,53 +1,68 @@
-import { fetchModal, openModal } from "./modal.js";
 import { api } from "./variables.js";
 import { AuthService } from "./authService.js";
 import { BackendService } from "./backendService.js";
+import { Modal } from "./modal.js";
 
 const authServiceInstance = new AuthService(api);
 const backendServiceInstance = new BackendService(api);
+const modalInstance = new Modal();
 
 const works = await backendServiceInstance.getWorks();
 const categories = await backendServiceInstance.getCategories();
 
-let modal = null;
+function checkToken() {
+  const token = window.localStorage.getItem("token");
+  if (token) {
+    createTopBar();
+    hideFilters();
+    createLinkOnH2();
+    changeLogStatus();
+    listenerToOpenModal();
+  };
+}
 
-const token = window.localStorage.getItem("token");
-if (token) {
-  // create top edition bar
-    const bodyChild = document.body.bodyChild;
-    const header = document.querySelector(".header");
-    header.classList.add("connected");
-    const adminPanel = document.createElement("div");
-    const adminContent = document.createElement("p")
-    adminContent.innerText = "Mode édition";
-    adminPanel.classList.add("admin-panel");
-    document.body.insertBefore(adminPanel, bodyChild);
-    adminPanel.appendChild(adminContent);
-    // hide filters
-    const hideFilters = document.querySelector(".filters");
-    hideFilters.classList.add("not-visible");
-    // create "edit" link on H2
-    const worksH2 = document.querySelector(".works-title");
-    const modify = document.createElement("a");
-    modify.classList.add("modify-works");
-    modify.setAttribute("href", "./src/pages/modal.html#edit");
-    modify.innerText = "Modifier"
-    worksH2.appendChild(modify);
-    // change login for logout
-    const logMode = document.getElementById("logMode");
-    logMode.innerText = "logout";
-    logMode.removeAttribute("href");
-    logMode.addEventListener("click", () => {
-      authServiceInstance.disconnect();
+function createTopBar() {
+  const bodyChild = document.body.bodyChild;
+  const header = document.querySelector(".header");
+  header.classList.add("connected");
+  const adminPanel = document.createElement("div");
+  const adminContent = document.createElement("p")
+  adminContent.innerText = "Mode édition";
+  adminPanel.classList.add("admin-panel");
+  document.body.insertBefore(adminPanel, bodyChild);
+  adminPanel.appendChild(adminContent);
+}
+
+function hideFilters() {
+  const hideFilters = document.querySelector(".filters");
+  hideFilters.classList.add("not-visible");
+}
+
+function createLinkOnH2() {
+  const worksH2 = document.querySelector(".works-title");
+  const modify = document.createElement("a");
+  modify.classList.add("modify-works");
+  modify.setAttribute("href", "./src/pages/modal.html#edit");
+  modify.innerText = "Modifier"
+  worksH2.appendChild(modify);
+}
+
+function changeLogStatus() {
+  const logMode = document.getElementById("logMode");
+  logMode.innerText = "logout";
+  logMode.removeAttribute("href");
+  logMode.addEventListener("click", () => {
+    authServiceInstance.disconnect();
+  });
+}
+
+function listenerToOpenModal() {
+  modalInstance.fetchModal("./src/pages/modal.html")
+  document.querySelectorAll(".modify-works").forEach(a => {
+    a.addEventListener("click", async (e) => {
+      modalInstance.openModal();
     });
-    // listener openModal
-    fetchModal("./src/pages/modal.html")
-    document.querySelectorAll(".modify-works").forEach(a => {
-        a.addEventListener("click", async (e) => {
-          openModal();
-          console.log("toto");
-        });
-      });
+  });
 }
 
 function generateWorks(works) {
@@ -113,6 +128,7 @@ function filterIsChecked() {
     }
   });
 }
+checkToken();
 generateWorks(works);
 generateFilters(categories);
 

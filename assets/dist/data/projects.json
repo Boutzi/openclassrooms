@@ -37,7 +37,7 @@
     "picture": "assets/images/p5.png",
     "technology": ["javascript"],
     "subtitle": "Premiers pas sur le langage JavaScript",
-    "success": false
+    "success": true
   },
   {
     "id": 6,
