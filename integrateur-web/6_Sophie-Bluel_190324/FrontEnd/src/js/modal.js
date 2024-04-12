@@ -1,23 +1,35 @@
+import { api } from "./variables.js";
+import { BackendService } from "./backendService.js";
+
+const backendServiceInstance = new BackendService(api);
+
 export class Modal {
     constructor() {
         this.modal = null;
         this.focusSelector = "button, a, input, textarea, select";
         this.focusables = [];
         this.previouslyFocused = null;
+
+        // GPT a encore frappé !
+        this.displayModal = this.displayModal.bind(this);
+        this.fetchModal = this.fetchModal.bind(this);
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.stopPropagation = this.stopPropagation.bind(this);
+        this.focusInModal = this.focusInModal.bind(this);
+        this.handleKeyDown = this.handleKeyDown.bind(this);
+        this.generateEdition = this.generateEdition.bind(this);
     }
 
     displayModal(html) {
         document.body.insertAdjacentHTML("beforeend", html);
         this.modal = document.getElementById("modal");
         this.modal.style.display = "none";
-        function closeModal() {
-            this.modal.style.display = "none";
-        }
-        modal.addEventListener("click", closeModal());
-        modal.querySelector(".js-modal-stop").addEventListener("click", this.stopPropagation());
-        this.modal.querySelector(".js-modal-close").addEventListener("click", closeModal());
+        modal.addEventListener("click", this.closeModal);
+        modal.querySelector(".js-modal-stop").addEventListener("click", this.stopPropagation);
+        this.modal.querySelector(".js-modal-close").addEventListener("click", this.closeModal);
     }
-    
+
     fetchModal(url) {
         fetch(url).then(response => {
             if (!response.ok) {
@@ -28,12 +40,28 @@ export class Modal {
         .then(html => this.displayModal(html));
     }
     
-    openModal() {
+    openModal(works) {
         this.modal = document.getElementById("modal");
         if (this.modal) {
-            this.modal.style.display = "flex";
+            this.modal.style.display = null;
+            this.generateEdition(works);
         }
     }
+    
+    closeModal() {
+        this.modal.style.display = "none";
+        this.clearModalContent();
+    }
+
+    clearModalContent() {
+        const gallery = document.querySelector(".modal-wrapper__content");
+        gallery.innerHTML = "";
+        const headDiv = document.querySelector(".modal-wrapper__head");
+        headDiv.innerHTML = "";
+        const footerDiv = document.querySelector(".modal-wrapper__footer");
+        footerDiv.innerHTML = "";
+    }
+
     stopPropagation(e) {
         e.stopPropagation();
     }
@@ -65,4 +93,94 @@ export class Modal {
             }
         })
      }
+
+     generateEdition(works) {
+        const gallery = document.querySelector(".modal-wrapper__content");
+        for (let i = 0; i < works.length; i++) {
+          const figure = works[i];
+          const galleryFigure = document.createElement("figure");
+          const galleryImg = document.createElement("img");
+          const deleteButton = document.createElement("img")
+          deleteButton.setAttribute("src", "./src/assets/icons/bin.svg")
+          deleteButton.classList.add("delete-button");
+          deleteButton.addEventListener("click", () => {
+            backendServiceInstance.deletePhoto(works[i].id);
+            });
+          galleryImg.setAttribute("src", figure.imageUrl);
+          galleryImg.setAttribute("alt", figure.title);
+          gallery.appendChild(galleryFigure);
+          galleryFigure.appendChild(galleryImg);
+          galleryFigure.appendChild(deleteButton);
+        }
+        const headDiv = document.querySelector(".modal-wrapper__head");
+        const addPhotoTitle = document.createElement("h2");
+        addPhotoTitle.setAttribute("id", "modal-title");
+        addPhotoTitle.innerText = "Galerie Photo";
+        const footerDiv = document.querySelector(".modal-wrapper__footer");
+        const addPhotoButton = document.createElement("button");
+        addPhotoButton.classList.add("add-photo");
+        addPhotoButton.innerText = "Ajouter une photo";
+        addPhotoButton.addEventListener("click", () => {
+            this.addPhotoMode();
+        });
+        headDiv.appendChild(addPhotoTitle);
+        footerDiv.appendChild(addPhotoButton);
+      }
+
+      async loadEdition(target) {
+        target.innerHTML = "";
+        const html = await fetch("./src/pages/edit.html").then(response => response.text());
+        target.innerHTML = html;
+        this.modal.querySelector(".js-modal-close").addEventListener("click", this.closeModal);
+    }
+      async addPhotoMode() {
+        let filePath = "";
+        const modalWrapper = document.querySelector(".modal-wrapper");
+        await this.loadEdition(modalWrapper);
+        this.getCategories();
+            const getFileInput = document.getElementById("getFile");
+            getFileInput.addEventListener("change", function(e) {
+                e.preventDefault();
+                const uploadArea = document.querySelector(".upload-area");
+                uploadArea.innerText = "";
+                const imageUpload = document.createElement("img");
+                imageUpload.setAttribute("src", getFileInput.value)
+                filePath = e.target.files[0];
+                // // START GPT Solution
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                
+                reader.onload = function(event) {
+                    imageUpload.setAttribute("src", event.target.result);
+                    uploadArea.appendChild(imageUpload);
+                };
+    
+                if (file) {
+                    reader.readAsDataURL(file);
+                }
+                // END GPT Solution
+            });
+        const userFrom = document.getElementById("uploadNewWork");
+        userFrom.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const selectedIndex = e.target.querySelector("[name=categories]").selectedIndex + 1;
+            const categoryId = selectedIndex.toString();
+            const newPhotoSchema = {
+                title: e.target.querySelector("[name=title]").value,
+                file: filePath,
+                categoryId: parseInt(categoryId)
+            }
+            backendServiceInstance.postPhoto(newPhotoSchema.file, newPhotoSchema.title, newPhotoSchema.categoryId);
+        });
+    }
+    
+    async getCategories() {
+        const select = document.getElementById("categories");
+        const categories = await fetch(`${api}/categories`).then(response => response.json());
+        categories.forEach(element => {
+            const option = document.createElement("option");
+            option.innerText = element.name;
+            select.appendChild(option);
+        });
+    }
 }

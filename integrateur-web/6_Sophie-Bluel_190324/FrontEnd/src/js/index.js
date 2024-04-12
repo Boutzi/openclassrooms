@@ -18,7 +18,7 @@ function checkToken() {
     createLinkOnH2();
     changeLogStatus();
     listenerToOpenModal();
-  };
+  }
 }
 
 function createTopBar() {
@@ -26,7 +26,7 @@ function createTopBar() {
   const header = document.querySelector(".header");
   header.classList.add("connected");
   const adminPanel = document.createElement("div");
-  const adminContent = document.createElement("p")
+  const adminContent = document.createElement("p");
   adminContent.innerText = "Mode édition";
   adminPanel.classList.add("admin-panel");
   document.body.insertBefore(adminPanel, bodyChild);
@@ -43,7 +43,7 @@ function createLinkOnH2() {
   const modify = document.createElement("a");
   modify.classList.add("modify-works");
   modify.setAttribute("href", "./src/pages/modal.html#edit");
-  modify.innerText = "Modifier"
+  modify.innerText = "Modifier";
   worksH2.appendChild(modify);
 }
 
@@ -57,17 +57,18 @@ function changeLogStatus() {
 }
 
 function listenerToOpenModal() {
-  modalInstance.fetchModal("./src/pages/modal.html")
-  document.querySelectorAll(".modify-works").forEach(a => {
+  modalInstance.fetchModal("./src/pages/modal.html");
+  document.querySelectorAll(".modify-works").forEach((a) => {
     a.addEventListener("click", async (e) => {
-      modalInstance.openModal();
+      e.preventDefault();
+      modalInstance.openModal(works);
     });
   });
 }
 
 function generateWorks(works) {
   for (let i = 0; i < works.length; i++) {
-    generateFigure(works[i])
+    generateFigure(works[i]);
   }
 }
 
@@ -131,4 +132,3 @@ function filterIsChecked() {
 checkToken();
 generateWorks(works);
 generateFilters(categories);
-
