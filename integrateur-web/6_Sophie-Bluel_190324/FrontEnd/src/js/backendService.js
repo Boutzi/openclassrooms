@@ -36,7 +36,6 @@ export class BackendService {
         formData.append("image", file);
         formData.append("title", title)
         formData.append("category", category)
-        console.log(formData);
         await fetch(`${this.url}/works`, {
             method: "POST",
             headers: { 

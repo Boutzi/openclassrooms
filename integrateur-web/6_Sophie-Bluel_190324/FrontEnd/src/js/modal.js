@@ -3,6 +3,8 @@ import { BackendService } from "./backendService.js";
 
 const backendServiceInstance = new BackendService(api);
 
+const works = await backendServiceInstance.getWorks();
+
 export class Modal {
   constructor() {
     this.modal = null;
@@ -143,18 +145,32 @@ export class Modal {
     this.modal.querySelector(".js-modal-close").addEventListener("click", this.closeModal);
   }
 
+  goBack() {
+    const arrow = document.querySelector(".arrow-go-back");
+    arrow.addEventListener("click", () => {
+      console.log("hello");
+      this.clearModalContent();
+      this.generateEdition(works);
+      arrow.style.display = "none";
+    })
+  }
+
   async addPhotoMode() {
     let filePath = "";
     const modalWrapper = document.querySelector(".modal-wrapper");
     await this.loadEdition(modalWrapper);
     this.getCategories();
+    this.goBack();
     const getFileInput = document.getElementById("getFile");
+    const validateButton = document.querySelector(".add-photo");
+    validateButton.style.background = "#A7A7A7";
     getFileInput.addEventListener("change", function (e) {
       e.preventDefault();
       const uploadArea = document.querySelector(".upload-area");
       uploadArea.innerText = "";
       const imageUpload = document.createElement("img");
       imageUpload.setAttribute("src", getFileInput.value);
+      imageUpload.classList.add("imageUpload");
       filePath = e.target.files[0];
       const file = e.target.files[0];
       const reader = new FileReader();
@@ -164,23 +180,29 @@ export class Modal {
       };
       if (file) {
         reader.readAsDataURL(file);
+        validateButton.style.background = "#1D6154";
       }
     });
     const userFrom = document.getElementById("uploadNewWork");
     userFrom.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const selectedIndex = e.target.querySelector("[name=categories]").selectedIndex + 1;
-      const categoryId = selectedIndex.toString();
-      const newPhotoSchema = {
-        title: e.target.querySelector("[name=title]").value,
-        file: filePath,
-        categoryId: parseInt(categoryId),
-      };
-      backendServiceInstance.postPhoto(
-        newPhotoSchema.file,
-        newPhotoSchema.title,
-        newPhotoSchema.categoryId
-      );
+      try {
+        e.preventDefault();
+        const selectedIndex = e.target.querySelector("[name=categories]").selectedIndex + 1;
+        const categoryId = selectedIndex.toString();
+        const newPhotoSchema = {
+          title: e.target.querySelector("[name=title]").value,
+          file: filePath,
+          categoryId: parseInt(categoryId),
+        };
+        backendServiceInstance.postPhoto(
+          newPhotoSchema.file,
+          newPhotoSchema.title,
+          newPhotoSchema.categoryId
+        );
+      } catch (error) {
+        throw new Error(error);
+      }
+      
     });
   }
 

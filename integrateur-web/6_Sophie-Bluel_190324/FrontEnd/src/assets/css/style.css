@@ -419,9 +419,11 @@ font-family: 'Work Sans' ;
 
 .add-photo {
 	display: flex;
+	justify-content: center;
 	border: none;
-	padding: 8px 20px;
-	border-radius: 20px;
+	padding: 8px 40px;
+	border-radius: 20px; 
+	width: 237px;
 	background: #1D6154;
 	color: #fff;
 	font-weight: 600;
@@ -466,13 +468,18 @@ font-family: 'Work Sans' ;
 	width: 100%;
 	background: #E8F1F6;
 	border-radius: 3px;
+	height: 169px;
 }
 .upload-area img {
 	display: flex;
-	width: 76px;
-	height: 76px;
+	height: 169px;
 	margin-block: 10px;
 }
+
+.upload-area .uploaded {
+	height: 169px;
+}
+
 .upload-area .get-file {
 	display: flex;
 	justify-content: center;
@@ -492,10 +499,26 @@ font-family: 'Work Sans' ;
 	background: #306685;
 }
 
+.upload-area label {
+	background: #CBD6DC;
+	color: #306685;
+	padding: 12px 30px;
+	font-size: 0.9rem;
+	border-radius: 25px;
+	font-family: "Work sans";
+	cursor: pointer;
+}
+
+.upload-area label:hover {
+	background: #b2bcc2;
+}
+
 .upload-area p {
 	display: flex;
 	margin-bottom: 20px;
-	font-size: 0.9rem;
+	font-size: 0.7rem;
+	margin-top: 8px;
+	font-family: "Work sans";
 }
 
 .upload-config {
@@ -503,6 +526,7 @@ font-family: 'Work Sans' ;
 	width: 100%;
 	flex-direction: column;
 	justify-content: center;
+	font-family: "Work sans";
 }
 
 #uploadNewWork > * {
@@ -531,4 +555,9 @@ font-family: 'Work Sans' ;
 
 input[type="file"] {
     display: none;
+}
+
+.arrow-go-back {
+	position: absolute;
+	cursor: pointer;
 }
