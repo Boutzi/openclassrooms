@@ -147,12 +147,13 @@ export class Modal {
 
   goBack() {
     const arrow = document.querySelector(".arrow-go-back");
+    if (arrow){
     arrow.addEventListener("click", () => {
-      console.log("hello");
       this.clearModalContent();
       this.generateEdition(works);
       arrow.style.display = "none";
-    })
+    });
+  }
   }
 
   async addPhotoMode() {
