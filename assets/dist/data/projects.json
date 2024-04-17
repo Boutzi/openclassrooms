@@ -51,7 +51,7 @@
     "id": 7,
     "repository": "#",
     "picture": "assets/images/p7.png",
-    "technology": ["react"],
+    "technology": ["react", "vite"],
     "subtitle": "Créez une application web de location immobilière avec React",
     "success": false
   }

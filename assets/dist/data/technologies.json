@@ -1,182 +1,190 @@
 [
-    {
-      "name": "angular",
-      "about": "Angular est un framework open source développé par Google pour construire des applications web dynamiques et évolutives."
-    },
-    {
-      "name": "aws",
-      "about": "AWS (Amazon Web Services) est une plateforme de services cloud proposée par Amazon, offrant une vaste gamme de services informatiques à la demande, tels que le stockage, le calcul, l'intelligence artificielle, la gestion des bases de données, etc."
-    },
-    {
-      "name": "azure",
-      "about": "Azure est la plateforme cloud de Microsoft, fournissant des services de cloud computing pour le stockage, le calcul, la gestion des données, l'intelligence artificielle, le développement d'applications, et bien plus encore."
-    },
-    {
-      "name": "blender",
-      "about": "Blender est un logiciel open source de modélisation, d'animation et de rendu en 3D. Il est largement utilisé dans les industries du cinéma, de la télévision, du jeu vidéo, de l'architecture, etc."
-    },
-    {
-      "name": "bootstrap",
-      "about": "Bootstrap est un framework front-end open source pour le développement web, fournissant des outils et des modèles pour la création rapide et efficace de sites web et d'applications web responsives."
-    },
-    {
-      "name": "c",
-      "about": "Le langage de programmation C est un langage de programmation de bas niveau largement utilisé pour le développement de logiciels système, d'applications embarquées, de pilotes de périphériques, et bien plus encore."
-    },
-    {
-      "name": "cpp",
-      "about": "C++ est un langage de programmation orienté objet dérivé du langage C, largement utilisé pour le développement de logiciels, de jeux vidéo, de systèmes embarqués, et d'applications hautes performances."
-    },
-    {
-      "name": "cs",
-      "about": "C# (prononcé 'C sharp') est un langage de programmation développé par Microsoft, principalement utilisé pour le développement d'applications sur la plateforme .NET."
-    },
-    {
-      "name": "css",
-      "about": "CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour définir la présentation visuelle des pages web écrites en HTML et XHTML."
-    },
-    {
-      "name": "figma",
-      "about": "Figma est une plateforme de design d'interface utilisateur basée sur le cloud, permettant la collaboration en temps réel entre les designers et les développeurs pour la création d'interfaces utilisateur interactives."
-    },
-    {
-      "name": "git",
-      "about": "Git est un système de contrôle de version distribué, largement utilisé pour le suivi des modifications du code source lors du développement de logiciels."
-    },
-    {
-      "name": "github",
-      "about": "GitHub est une plateforme de développement collaboratif de logiciels, permettant l'hébergement de projets, le suivi des problèmes, la gestion des versions à l'aide de Git, et la collaboration entre développeurs."
-    },
-    {
-      "name": "gradle",
-      "about": "Gradle est un système de build open source utilisé pour automatiser le processus de construction, de test et de déploiement des projets logiciels."
-    },
-    {
-      "name": "html",
-      "about": "HTML (HyperText Markup Language) est le langage de balisage standard utilisé pour créer des pages web et définir leur structure et leur contenu."
-    },
-    {
-      "name": "illustrator",
-      "about": "Adobe Illustrator est un logiciel de création graphique vectorielle utilisé par les designers pour créer des illustrations, des logos, des graphiques, et d'autres éléments graphiques."
-    },
-    {
-      "name": "insomnia",
-      "about": "Insomnia est un client REST API open source permettant aux développeurs de tester et de déboguer les API de manière efficace."
-    },
-    {
-      "name": "java",
-      "about": "Java est un langage de programmation populaire, utilisé pour le développement d'applications de bureau, d'applications web, d'applications mobiles, de jeux vidéo, et bien plus encore."
-    },
-    {
-      "name": "javascript",
-      "about": "JavaScript est un langage de programmation de scripts utilisé pour rendre les pages web interactives et dynamiques."
-    },
-    {
-      "name": "jquery",
-      "about": "jQuery est une bibliothèque JavaScript open source qui simplifie l'écriture de scripts côté client pour HTML."
-    },
-    {
-      "name": "logo",
-      "about": "Logo est un langage de programmation destiné à l'apprentissage de la programmation par les enfants, en utilisant des commandes simples pour contrôler le mouvement d'un curseur graphique."
-    },
-    {
-      "name": "mongodb",
-      "about": "MongoDB est une base de données NoSQL open source, orientée documents, conçue pour le stockage et la récupération de données semi-structurées."
-    },
-    {
-      "name": "net",
-      "about": ".NET est un framework de développement d'applications multiplateforme développé par Microsoft, utilisé pour construire des applications web, des applications de bureau, des services cloud, et bien plus encore."
-    },
-    {
-      "name": "node",
-      "about": "Node.js est un environnement d'exécution JavaScript côté serveur, permettant d'exécuter du code JavaScript côté serveur pour la construction de serveurs web et d'applications réseau."
-    },
-    {
-      "name": "npm",
-      "about": "npm est le gestionnaire de paquets par défaut pour Node.js, permettant d'installer, de partager et de gérer des packages JavaScript pour le développement d'applications Node.js."
-    },
-    {
-      "name": "nuget",
-      "about": "NuGet est un gestionnaire de packages pour la plateforme .NET, permettant d'installer et de gérer des packages pour les projets .NET."
-    },
-    {
-      "name": "nuxtjs",
-      "about": "Nuxt.js est un framework web Vue.js basé sur Vue.js, permettant le rendu côté serveur et le rendu côté client pour les applications web Vue.js."
-    },
-    {
-      "name": "photoshop",
-      "about": "Adobe Photoshop est un logiciel de retouche d'image et de création graphique, utilisé par les designers et les photographes pour éditer et manipuler des images."
-    },
-    {
-        "name": "postman",
-        "about": "Postman est un outil de développement d'API qui permet aux développeurs de créer, de tester et de déboguer des API de manière efficace."
-    },
-    {
-        "name": "powershell",
-        "about": "PowerShell est un shell de ligne de commande et un langage de script développé par Microsoft, principalement utilisé pour l'automatisation des tâches administratives et la gestion des systèmes Windows."
-    },
-    {
-        "name": "python",
-        "about": "Python est un langage de programmation polyvalent et facile à apprendre, largement utilisé pour le développement web, le développement logiciel, l'analyse de données, l'apprentissage automatique, et plus encore."
-    },
-    {
-        "name": "r",
-        "about": "R est un langage de programmation utilisé pour l'analyse statistique et la visualisation des données, largement utilisé par les statisticiens et les analystes de données."
-    },
-    {
-        "name": "react",
-        "about": "React est une bibliothèque JavaScript open source utilisée pour la construction d'interfaces utilisateur interactives et évolutives."
-    },
-    {
-        "name": "redux",
-        "about": "Redux est un conteneur d'état prévisible pour les applications JavaScript, utilisé avec des bibliothèques comme React ou Angular pour gérer l'état de l'application de manière centralisée."
-    },
-    {
-        "name": "ruby",
-        "about": "Ruby est un langage de programmation dynamique, open source et orienté objet, utilisé pour le développement web, la création de scripts, le développement d'applications mobiles, et bien plus encore."
-    },
-    {
-        "name": "sass",
-        "about": "Sass est un langage de feuilles de style en cascade (CSS) avec des fonctionnalités étendues, telles que les variables, les mixins et les boucles, facilitant le développement et la maintenance des styles CSS."
-    },
-    {
-        "name": "slack",
-        "about": "Slack est une plateforme de communication d'entreprise qui permet aux équipes de collaborer, de partager des fichiers et de communiquer de manière efficace."
-    },
-    {
-        "name": "sping",
-        "about": "Spring est un framework d'application Java open source et léger utilisé pour le développement d'applications d'entreprise."
-    },
-    {
-        "name": "stackoverflow",
-        "about": "Stack Overflow est une communauté en ligne où les développeurs peuvent poser des questions, partager des connaissances et résoudre des problèmes liés à la programmation et au développement logiciel."
-    },
-    {
-        "name": "swagger",
-        "about": "Swagger est un ensemble d'outils open source permettant de concevoir, de créer, de documenter et de consommer des services web RESTful."
-    },
-    {
-        "name": "swift",
-        "about": "Swift est un langage de programmation développé par Apple pour le développement d'applications iOS, macOS, watchOS et tvOS."
-    },
-    {
-        "name": "tailwind",
-        "about": "Tailwind CSS est un framework CSS utilitaire basé sur des classes, conçu pour simplifier le développement web en fournissant des composants pré-stylisés et des utilitaires pour la création d'interfaces utilisateur."
-    },
-    {
-        "name": "typescript",
-        "about": "TypeScript est un sur-ensemble de JavaScript développé par Microsoft, ajoutant des fonctionnalités de typage statique optionnel et d'autres fonctionnalités avancées au langage."
-    },
-    {
-        "name": "vscode",
-        "about": "Visual Studio Code (VS Code) est un éditeur de code source développé par Microsoft, offrant des fonctionnalités avancées pour le développement de logiciels, y compris la prise en charge de nombreux langages de programmation, la gestion des extensions et bien plus encore."
-    },
-    {
-        "name": "webpack",
-        "about": "Webpack est un utilitaire de build statique pour JavaScript, permettant de regrouper, de transformer et de conditionner les ressources web, telles que les fichiers JavaScript, les fichiers CSS, et les images, pour les rendre prêts à être utilisés dans une application web."
-    },
-    {
-        "name": "windows",
-        "about": "Windows est un système d'exploitation développé par Microsoft, largement utilisé sur les ordinateurs personnels, les serveurs, les appareils mobiles et les appareils intégrés."
-    }
+  {
+    "name": "angular",
+    "about": "Angular est un framework open source développé par Google pour construire des applications web dynamiques et évolutives."
+  },
+  {
+    "name": "aws",
+    "about": "AWS (Amazon Web Services) est une plateforme de services cloud proposée par Amazon, offrant une vaste gamme de services informatiques à la demande, tels que le stockage, le calcul, l'intelligence artificielle, la gestion des bases de données, etc."
+  },
+  {
+    "name": "azure",
+    "about": "Azure est la plateforme cloud de Microsoft, fournissant des services de cloud computing pour le stockage, le calcul, la gestion des données, l'intelligence artificielle, le développement d'applications, et bien plus encore."
+  },
+  {
+    "name": "blender",
+    "about": "Blender est un logiciel open source de modélisation, d'animation et de rendu en 3D. Il est largement utilisé dans les industries du cinéma, de la télévision, du jeu vidéo, de l'architecture, etc."
+  },
+  {
+    "name": "bootstrap",
+    "about": "Bootstrap est un framework front-end open source pour le développement web, fournissant des outils et des modèles pour la création rapide et efficace de sites web et d'applications web responsives."
+  },
+  {
+    "name": "c",
+    "about": "Le langage de programmation C est un langage de programmation de bas niveau largement utilisé pour le développement de logiciels système, d'applications embarquées, de pilotes de périphériques, et bien plus encore."
+  },
+  {
+    "name": "cpp",
+    "about": "C++ est un langage de programmation orienté objet dérivé du langage C, largement utilisé pour le développement de logiciels, de jeux vidéo, de systèmes embarqués, et d'applications hautes performances."
+  },
+  {
+    "name": "cs",
+    "about": "C# (prononcé 'C sharp') est un langage de programmation développé par Microsoft, principalement utilisé pour le développement d'applications sur la plateforme .NET."
+  },
+  {
+    "name": "css",
+    "about": "CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour définir la présentation visuelle des pages web écrites en HTML et XHTML."
+  },
+  {
+    "name": "figma",
+    "about": "Figma est une plateforme de design d'interface utilisateur basée sur le cloud, permettant la collaboration en temps réel entre les designers et les développeurs pour la création d'interfaces utilisateur interactives."
+  },
+  {
+    "name": "git",
+    "about": "Git est un système de contrôle de version distribué, largement utilisé pour le suivi des modifications du code source lors du développement de logiciels."
+  },
+  {
+    "name": "github",
+    "about": "GitHub est une plateforme de développement collaboratif de logiciels, permettant l'hébergement de projets, le suivi des problèmes, la gestion des versions à l'aide de Git, et la collaboration entre développeurs."
+  },
+  {
+    "name": "gradle",
+    "about": "Gradle est un système de build open source utilisé pour automatiser le processus de construction, de test et de déploiement des projets logiciels."
+  },
+  {
+    "name": "html",
+    "about": "HTML (HyperText Markup Language) est le langage de balisage standard utilisé pour créer des pages web et définir leur structure et leur contenu."
+  },
+  {
+    "name": "illustrator",
+    "about": "Adobe Illustrator est un logiciel de création graphique vectorielle utilisé par les designers pour créer des illustrations, des logos, des graphiques, et d'autres éléments graphiques."
+  },
+  {
+    "name": "insomnia",
+    "about": "Insomnia est un client REST API open source permettant aux développeurs de tester et de déboguer les API de manière efficace."
+  },
+  {
+    "name": "java",
+    "about": "Java est un langage de programmation populaire, utilisé pour le développement d'applications de bureau, d'applications web, d'applications mobiles, de jeux vidéo, et bien plus encore."
+  },
+  {
+    "name": "javascript",
+    "about": "JavaScript est un langage de programmation de scripts utilisé pour rendre les pages web interactives et dynamiques."
+  },
+  {
+    "name": "jquery",
+    "about": "jQuery est une bibliothèque JavaScript open source qui simplifie l'écriture de scripts côté client pour HTML."
+  },
+  {
+    "name": "logo",
+    "about": "Logo est un langage de programmation destiné à l'apprentissage de la programmation par les enfants, en utilisant des commandes simples pour contrôler le mouvement d'un curseur graphique."
+  },
+  {
+    "name": "mongodb",
+    "about": "MongoDB est une base de données NoSQL open source, orientée documents, conçue pour le stockage et la récupération de données semi-structurées."
+  },
+  {
+    "name": "net",
+    "about": ".NET est un framework de développement d'applications multiplateforme développé par Microsoft, utilisé pour construire des applications web, des applications de bureau, des services cloud, et bien plus encore."
+  },
+  {
+    "name": "node",
+    "about": "Node.js est un environnement d'exécution JavaScript côté serveur, permettant d'exécuter du code JavaScript côté serveur pour la construction de serveurs web et d'applications réseau."
+  },
+  {
+    "name": "npm",
+    "about": "npm est le gestionnaire de paquets par défaut pour Node.js, permettant d'installer, de partager et de gérer des packages JavaScript pour le développement d'applications Node.js."
+  },
+  {
+    "name": "nuget",
+    "about": "NuGet est un gestionnaire de packages pour la plateforme .NET, permettant d'installer et de gérer des packages pour les projets .NET."
+  },
+  {
+    "name": "nuxtjs",
+    "about": "Nuxt.js est un framework web Vue.js basé sur Vue.js, permettant le rendu côté serveur et le rendu côté client pour les applications web Vue.js."
+  },
+  {
+    "name": "photoshop",
+    "about": "Adobe Photoshop est un logiciel de retouche d'image et de création graphique, utilisé par les designers et les photographes pour éditer et manipuler des images."
+  },
+  {
+    "name": "postman",
+    "about": "Postman est un outil de développement d'API qui permet aux développeurs de créer, de tester et de déboguer des API de manière efficace."
+  },
+  {
+    "name": "powershell",
+    "about": "PowerShell est un shell de ligne de commande et un langage de script développé par Microsoft, principalement utilisé pour l'automatisation des tâches administratives et la gestion des systèmes Windows."
+  },
+  {
+    "name": "python",
+    "about": "Python est un langage de programmation polyvalent et facile à apprendre, largement utilisé pour le développement web, le développement logiciel, l'analyse de données, l'apprentissage automatique, et plus encore."
+  },
+  {
+    "name": "r",
+    "about": "R est un langage de programmation utilisé pour l'analyse statistique et la visualisation des données, largement utilisé par les statisticiens et les analystes de données."
+  },
+  {
+    "name": "react",
+    "about": "React est une bibliothèque JavaScript open source utilisée pour la construction d'interfaces utilisateur interactives et évolutives."
+  },
+  {
+    "name": "redux",
+    "about": "Redux est un conteneur d'état prévisible pour les applications JavaScript, utilisé avec des bibliothèques comme React ou Angular pour gérer l'état de l'application de manière centralisée."
+  },
+  {
+    "name": "ruby",
+    "about": "Ruby est un langage de programmation dynamique, open source et orienté objet, utilisé pour le développement web, la création de scripts, le développement d'applications mobiles, et bien plus encore."
+  },
+  {
+    "name": "sass",
+    "about": "Sass est un langage de feuilles de style en cascade (CSS) avec des fonctionnalités étendues, telles que les variables, les mixins et les boucles, facilitant le développement et la maintenance des styles CSS."
+  },
+  {
+    "name": "slack",
+    "about": "Slack est une plateforme de communication d'entreprise qui permet aux équipes de collaborer, de partager des fichiers et de communiquer de manière efficace."
+  },
+  {
+    "name": "sping",
+    "about": "Spring est un framework d'application Java open source et léger utilisé pour le développement d'applications d'entreprise."
+  },
+  {
+    "name": "stackoverflow",
+    "about": "Stack Overflow est une communauté en ligne où les développeurs peuvent poser des questions, partager des connaissances et résoudre des problèmes liés à la programmation et au développement logiciel."
+  },
+  {
+    "name": "swagger",
+    "about": "Swagger est un ensemble d'outils open source permettant de concevoir, de créer, de documenter et de consommer des services web RESTful."
+  },
+  {
+    "name": "swift",
+    "about": "Swift est un langage de programmation développé par Apple pour le développement d'applications iOS, macOS, watchOS et tvOS."
+  },
+  {
+    "name": "tailwind",
+    "about": "Tailwind CSS est un framework CSS utilitaire basé sur des classes, conçu pour simplifier le développement web en fournissant des composants pré-stylisés et des utilitaires pour la création d'interfaces utilisateur."
+  },
+  {
+    "name": "typescript",
+    "about": "TypeScript est un sur-ensemble de JavaScript développé par Microsoft, ajoutant des fonctionnalités de typage statique optionnel et d'autres fonctionnalités avancées au langage."
+  },
+  {
+    "name": "vscode",
+    "about": "Visual Studio Code (VS Code) est un éditeur de code source développé par Microsoft, offrant des fonctionnalités avancées pour le développement de logiciels, y compris la prise en charge de nombreux langages de programmation, la gestion des extensions et bien plus encore."
+  },
+  {
+    "name": "webpack",
+    "about": "Webpack est un utilitaire de build statique pour JavaScript, permettant de regrouper, de transformer et de conditionner les ressources web, telles que les fichiers JavaScript, les fichiers CSS, et les images, pour les rendre prêts à être utilisés dans une application web."
+  },
+  {
+    "name": "windows",
+    "about": "Windows est un système d'exploitation développé par Microsoft, largement utilisé sur les ordinateurs personnels, les serveurs, les appareils mobiles et les appareils intégrés."
+  },
+  {
+    "name": "vite",
+    "about": "Vite.js est un outil de développement web rapide et efficace spécialement conçu pour les applications React. Il se distingue par sa vitesse et son support natif des modules ES, offrant ainsi des temps de construction et de remplacement de modules à chaud incroyablement rapides."
+  },
+  {
+    "name": "next",
+    "about": "Next.js est un framework de développement web open-source créé par la société privée Vercel qui fournit des applications web basées sur React avec un rendu côté serveur et une génération de site web statique."
+  }
 ]
