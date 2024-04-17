@@ -1,0 +1,27 @@
+@use "../utils/" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-canvas;
+  &::-webkit-scrollbar {
+    width: $scrollbar-size;
+  }
+  &::-webkit-scrollbar-track {
+    background: $scrollbar;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb;
+    border-radius: $border-radius-s;
+  }
+}
+
+body,
+header,
+main,
+aside,
+footer {
+  font-family: $font-primary;
+}

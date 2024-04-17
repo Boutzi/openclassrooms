@@ -1,0 +1,23 @@
+@use "../utils/" as *;
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $color-canvas-inverted;
+  height: 209px;
+  width: 100%;
+  &__logo {
+    display: flex;
+    width: 122px;
+    margin-bottom: 50px;
+  }
+  &__copyright {
+    display: flex;
+    color: $color-text-inverted;
+  }
+}

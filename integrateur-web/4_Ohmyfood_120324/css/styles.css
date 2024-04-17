@@ -133,14 +133,19 @@ h4 {
   color: #000000;
 }
 
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
   font-family: inherit;
   font-size: inherit;
   padding: 10px;
   border: 1px solid #101010;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: 2px solid #2a6cd7;
   border: 1px solid transparent;
 }
