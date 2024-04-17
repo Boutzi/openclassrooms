@@ -121,20 +121,19 @@ export class Home {
   listenerFilters(filter, id) {
     filter.addEventListener("click", () => {
       this.filterOnClick(id);
-      this.filterIsChecked();
     });
   }
   filterOnClick(id) {
     const worksFiltered = works.filter((data) => id === 0 || data.categoryId == id);
     document.querySelector(".gallery").innerHTML = "";
     this.generateWorks(worksFiltered);
+    this.filterIsChecked(id);
   }
 
-  filterIsChecked() {
-    const filters = document.querySelectorAll(".filter__item");
+  filterIsChecked(id) {
+    const filters = document.querySelectorAll(".filters__item");
     filters.forEach((element) => {
-      if (element.classList.contains(`cat${element.id}`)) {
-        console.log(element.name);
+      if (element.classList.contains(`cat${id}`)) {
         element.classList.add("filters--checked");
       } else {
         element.classList.remove("filters--checked");

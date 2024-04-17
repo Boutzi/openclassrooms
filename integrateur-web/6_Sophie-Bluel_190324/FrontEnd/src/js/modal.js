@@ -11,16 +11,6 @@ export class Modal {
     this.focusSelector = "button, a, input, textarea, select";
     this.focusables = [];
     this.previouslyFocused = null;
-
-    // GPT a encore frappé !
-    this.displayModal = this.displayModal.bind(this);
-    this.fetchModal = this.fetchModal.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-    this.stopPropagation = this.stopPropagation.bind(this);
-    this.focusInModal = this.focusInModal.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.generateEdition = this.generateEdition.bind(this);
   }
 
   displayModal(html) {
