@@ -147,13 +147,16 @@ export class Modal {
 
   goBack() {
     const arrow = document.querySelector(".arrow-go-back");
-    if (arrow){
-    arrow.addEventListener("click", () => {
-      this.clearModalContent();
-      this.generateEdition(works);
-      arrow.style.display = "none";
-    });
-  }
+    if (arrow) {
+      arrow.addEventListener("click", () => {
+        this.clearModalContent();
+        const gallery = document.querySelector(".modal-wrapper__content");
+        gallery.classList.remove("edit");
+        gallery.classList.add("view");
+        this.generateEdition(works);
+        arrow.style.display = "none";
+      });
+    }
   }
 
   async addPhotoMode() {
@@ -203,7 +206,6 @@ export class Modal {
       } catch (error) {
         throw new Error(error);
       }
-      
     });
   }
 

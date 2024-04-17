@@ -1,5 +1,4 @@
-
-<img class="arrow-go-back" src="./src/assets/icons/arrow-left.svg">
+<img class="arrow-go-back" src="./src/assets/icons/arrow-left.svg" />
 <div class="modal-wrapper__close">
   <button class="js-modal-close" aria-label="Fermer la boite modale">&#10006;</button>
 </div>
@@ -7,25 +6,23 @@
   <div class="modal-wrapper__head">
     <h2>Ajout Photo</h2>
   </div>
-  <div class="modal-wrapper__content">
+  <div class="modal-wrapper__content edit">
     <div class="upload-area">
       <img src="src/assets/icons/img.png" alt="icone d'une image générique" />
-        <label for="getFile">+ Ajouter Photo</label>
-        <input
-          type="file"
-          id="getFile"
-          style="display: none"
-          accept="image/jpg, image/jpeg, image/png"
-        />
+      <label for="getFile">+ Ajouter Photo</label>
+      <input
+        type="file"
+        id="getFile"
+        style="display: none"
+        accept="image/jpg, image/jpeg, image/png"
+      />
       <p>jpg, png : 4mo max</p>
     </div>
     <div class="upload-config">
       <label>Titre</label>
       <input type="text" name="title" id="title" />
       <label for="categories">Catégorie</label>
-      <select id="categories" name="categories">
-      </select>
-      
+      <select id="categories" name="categories"></select>
     </div>
   </div>
   <div class="modal-wrapper__footer">
