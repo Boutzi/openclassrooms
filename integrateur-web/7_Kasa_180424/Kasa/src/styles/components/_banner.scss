@@ -1,0 +1,23 @@
+@use "../utils/" as *;
+
+.banner {
+  display: flex;
+  position: relative;
+  height: 223px;
+  border-radius: $border-radius-xxl;
+  overflow: hidden;
+  background: $color-pure-inverted;
+  margin-bottom: 43px;
+  &__img {
+    opacity: 0.3;
+  }
+  &__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: $font-size-xxxl;
+    color: $color-text-inverted;
+    filter: drop-shadow(0 0 8px $color-text);
+  }
+}

@@ -1,0 +1,13 @@
+@use "../utils/" as *;
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    gap: 60px;
+    padding: 50px;
+    flex-wrap: wrap;
+    min-height: 200px;
+    background: $color-secondary;
+    border-radius: $border-radius-xxl;
+}

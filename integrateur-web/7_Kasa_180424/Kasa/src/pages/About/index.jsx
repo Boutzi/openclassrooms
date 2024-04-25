@@ -1,15 +1,14 @@
 import Banner from "../../components/Banner"
-import Gallery from "../../components/Gallery"
 
-function Home() {
+function About() {
   return (
     <>
       <main className="main-content">
         <Banner />
-        <Gallery />
+        <p>ABOUT</p>
       </main>
     </>
   )
 }
 
-export default Home
+export default About;
