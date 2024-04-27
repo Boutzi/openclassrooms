@@ -11,6 +11,8 @@ export class Modal {
     this.focusSelector = "button, a, input, textarea, select";
     this.focusables = [];
     this.previouslyFocused = null;
+    this.closeModal = this.closeModal.bind(this);
+    this.handleKeyDown();
   }
 
   displayModal(html) {
@@ -42,8 +44,10 @@ export class Modal {
   }
 
   closeModal() {
-    this.modal.style.display = "none";
-    this.clearModalContent();
+    if (this.modal) {
+      this.modal.style.display = "none";
+      this.clearModalContent();
+    }
   }
 
   clearModalContent() {
@@ -59,30 +63,10 @@ export class Modal {
     e.stopPropagation();
   }
 
-  focusInModal(e) {
-    e.preventDefault();
-    let index = this.focusables.findIndex((f) => f === this.modal.querySelector(":focus"));
-    if (e.shiftKey === true) {
-      index--;
-    } else {
-      index++;
-    }
-    if (index >= this.focusables.length) {
-      index = 0;
-    }
-    if (index < 0) {
-      index = this.focusables.length - 1;
-    }
-    this.focusables[index].focus();
-  }
-
   handleKeyDown() {
     window.addEventListener("keydown", (e) => {
       if (e.key === "Escape" || e.key === "Esc") {
-        closeModal(e);
-      }
-      if (e.key === "Tab" && this.modal !== null) {
-        this.focusInModal(e);
+        this.closeModal(e);
       }
     });
   }

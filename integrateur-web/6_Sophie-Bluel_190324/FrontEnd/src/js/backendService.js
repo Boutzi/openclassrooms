@@ -34,8 +34,8 @@ export class BackendService {
     async postPhoto(file, title, category) {
         const formData = new FormData();
         formData.append("image", file);
-        formData.append("title", title)
-        formData.append("category", category)
+        formData.append("title", title);
+        formData.append("category", category);
         await fetch(`${this.url}/works`, {
             method: "POST",
             headers: { 

@@ -98,6 +98,7 @@ export class Home {
     galleryFigure.appendChild(galleryImg);
     galleryFigure.appendChild(galleryFigcaption);
   }
+  
   generateFilters(category) {
     this.createFilter(0, "Tous", true);
     for (let i = 0; i < category.length; i++) {
@@ -123,6 +124,7 @@ export class Home {
       this.filterOnClick(id);
     });
   }
+
   filterOnClick(id) {
     const worksFiltered = works.filter((data) => id === 0 || data.categoryId == id);
     document.querySelector(".gallery").innerHTML = "";
