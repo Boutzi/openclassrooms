@@ -1,0 +1,17 @@
+@use "../utils/" as *;
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    &__main {
+        font-size: $font-size-xxl;
+        color: $color-primary;
+        line-height: $spacing-xl;
+    }
+    &__subtitle {
+        font-size: $font-size-m;
+        font-weight: $font-weight-medium;
+        line-height: $spacing-xl;
+    }
+}

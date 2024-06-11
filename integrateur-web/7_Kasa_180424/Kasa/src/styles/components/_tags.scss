@@ -1,0 +1,16 @@
+@use "../utils/" as *;
+
+.tags {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  &__item {
+    display: flex;
+    padding: 5px 30px;
+    justify-content: center;
+    color: $color-text-inverted;
+    border-radius: 10px;
+    background-color: $color-primary;
+  }
+}

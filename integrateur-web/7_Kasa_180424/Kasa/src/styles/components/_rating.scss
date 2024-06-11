@@ -1,0 +1,11 @@
+@use "../utils/" as *;
+
+.rating {
+    display: flex;
+    gap: 5px; 
+  
+    img {
+      width: 36px;
+      height: auto;
+    }
+  }

@@ -1,0 +1,25 @@
+@use "../utils/" as *;
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    min-height: 50vh;
+    &__title {
+        display: flex;
+        font-size: 288px;
+        color: $color-primary;
+    }
+    &__subtitle {
+        display: flex;
+        font-size: 36px;
+        color: $color-primary;
+        font-weight: $font-weight-medium;
+    }
+    &__link {
+        display: flex;
+        font-weight: $font-weight-bold;
+    }
+}

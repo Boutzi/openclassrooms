@@ -1,0 +1,53 @@
+@use "../utils/" as *;
+
+.tab {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  z-index: 5;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
+  .tab__label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text-inverted;
+    background: $color-primary;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    @media (max-width: 769px) {
+      font-size: 16px;
+    }
+    &__arrow {
+      position: absolute;
+      right: 20px;
+      transition: all 0.35s;
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in-out, padding 0.25s ease-in-out;
+    padding: 0 20px;
+    background-color: $color-secondary;
+    border-radius: 5px;
+    list-style: none;
+
+    &.open {
+      max-height: 500px;
+      padding: 20px;
+    }
+    &__list {
+      margin-bottom: 10px;
+    }
+  }
+}

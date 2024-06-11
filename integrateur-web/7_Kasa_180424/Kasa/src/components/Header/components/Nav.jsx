@@ -7,7 +7,6 @@ function Nav() {
         <li className="menu__item">
           <NavLink
             to="/"
-            activeClassName="active"
             className="menu__item__link"
           >
             Accueil
@@ -16,7 +15,6 @@ function Nav() {
         <li className="menu__item">
           <NavLink
             to="/about"
-            activeClassName="active"
             className="menu__item__link"
           >
             À Propos

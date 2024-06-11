@@ -1,4 +1,3 @@
-import React from "react";
 import kasaLogo from "../../assets/logos/logo.svg";
 
 function Footer() {

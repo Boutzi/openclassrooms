@@ -1,0 +1,29 @@
+
+.sheet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__top {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 1;
+    }
+    &__middle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.sheet-collapse {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+}
