@@ -1,10 +1,11 @@
+/* eslint-disable no-undef */
 import PropTypes from "prop-types"
 import Carrousel from "../../components/Sheet/Carrousel"
 import Sheet from "../../components/Sheet/Sheet"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { getAccomodationDetails } from "../../Services/accomodationServices"
-import Error from "../../components/Error"
+import Error from "../../pages/Error"
 
 function Details() {
   const { id } = useParams()

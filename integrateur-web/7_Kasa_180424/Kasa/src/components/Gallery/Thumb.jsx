@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 function Thumb({id, title, cover}) {
     return (
         <>
-        <Link to={`/details/${id}`}>
-            <li className="thumb">
+        <Link className="thumb" to={`/details/${id}`}>
+            <li >
                 <h2 className="thumb__title">{title}</h2>
-                <img src={cover} alt={`${title} cover`} />
+                <img className="thumb__img" src={cover} alt={`${title} cover`} />
             </li>
         </Link>
         </>
