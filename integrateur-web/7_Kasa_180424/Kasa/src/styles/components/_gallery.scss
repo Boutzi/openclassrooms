@@ -4,10 +4,18 @@
     display: flex;
     overflow: hidden;
     flex-direction: row;
+    justify-content: start;
     gap: 60px;
     padding: 50px;
     flex-wrap: wrap;
     min-height: 200px;
     background: $color-secondary;
     border-radius: $border-radius-xxl;
+    @media (max-width: 769px) {
+        flex-direction: column;
+        gap: 22px;
+        padding: 0;
+        background: none;
+        overflow: visible;
+    }
 }

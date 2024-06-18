@@ -4,6 +4,7 @@
   display: flex;
   position: relative;
   height: 223px;
+  width: 100%;
   border-radius: $border-radius-xxl;
   overflow: hidden;
   background: $color-pure-inverted;
@@ -27,5 +28,16 @@
     font-size: $font-size-xxxl;
     color: $color-text-inverted;
     filter: drop-shadow(0 0 8px $color-text);
+    @media (max-width: 769px) {
+      left: 38%;
+      font-size: $font-size-l;
+    }
+  }
+  @media (max-width: 1240px) {
+    height: 180px;
+  }
+  @media (max-width: 769px) {
+    height: 111px;
+    border-radius: $border-radius-m;
   }
 }

@@ -16,7 +16,11 @@
         cursor: pointer;
         position: absolute;
         top: 50%;
+        height: 60px;
         transform: translate(0, -50%);
+        @media (max-width: 769px) {
+            height: 30px;
+        }
     }
     .left {
         left: 20px;
@@ -30,5 +34,8 @@
         bottom: 30px;
         left: 50%;
         transform: translate(-50%, 0);
+    }
+    @media (max-width: 769px) {
+        height: 200px;
     }
 }

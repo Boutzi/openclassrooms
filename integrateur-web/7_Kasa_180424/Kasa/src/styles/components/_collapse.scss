@@ -9,7 +9,7 @@
   box-sizing: border-box;
   z-index: 5;
   @media (max-width: 769px) {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   .tab__label {
     position: relative;
@@ -49,5 +49,8 @@
     &__list {
       margin-bottom: 10px;
     }
+  }
+  @media (max-width: 769px) {
+    width: 100%;
   }
 }

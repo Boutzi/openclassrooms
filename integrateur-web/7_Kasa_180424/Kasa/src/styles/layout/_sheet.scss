@@ -1,23 +1,35 @@
 
 .sheet {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
     justify-content: space-between;
     &__top {
-        margin-top: 20px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         flex: 1;
+        @media (max-width: 769px) {
+            flex-direction: column;
+        }
     }
     &__middle {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
+        @media (max-width: 769px) {
+            margin-top: 20px;
+            width: 100%;
+            flex-direction: row-reverse;
+        }
     }
     &__bottom {
         display: flex;
         flex-direction: row;
+        @media (max-width: 769px) {
+            flex-direction: row;
+        }
     }
 }
 
@@ -25,5 +37,9 @@
     margin-top: 30px;
     width: 100%;
     display: flex;
-    gap: 100px;
+    gap: 30px;
+    @media (max-width: 769px) {
+        flex-direction: column;
+        margin-top: 30px;
+    }
 }

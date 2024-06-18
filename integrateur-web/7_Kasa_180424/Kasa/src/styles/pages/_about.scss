@@ -1,0 +1,9 @@
+
+.about_collapse {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    @media (max-width: 769px) {
+        gap:30px;
+    }
+}

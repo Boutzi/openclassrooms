@@ -21,10 +21,10 @@ function Sheet({
       <div className="sheet">
         <div className="sheet__top">
           <Title title={title} location={location} />
-          <Host name={name} picture={picture} />
+          <Tags tags={tags} />
         </div>
         <div className="sheet__middle">
-          <Tags tags={tags} />
+          <Host name={name} picture={picture} />
           <Rating stars={rating} />
         </div>
         <div className="sheet__bottom">

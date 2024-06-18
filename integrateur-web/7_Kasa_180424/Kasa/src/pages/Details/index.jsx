@@ -2,26 +2,23 @@ import PropTypes from "prop-types"
 import Carrousel from "../../components/Sheet/Carrousel"
 import Sheet from "../../components/Sheet/Sheet"
 import { useState, useEffect } from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { getAccomodationDetails } from "../../Services/accomodationServices"
+import Error from "../../components/Error"
 
 function Details() {
   const { id } = useParams()
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
-  const navigate = useNavigate()
 
   async function initDetails() {
     try {
       const details = await getAccomodationDetails(id)
-      if (!details) {
-        navigate("/error")
-      } else {
+      if (details) {
         setData(details)
       }
     } catch {
       console.error("Données introuvables: ", error)
-      navigate("/error")
     } finally {
       setLoading(false)
     }
@@ -36,7 +33,7 @@ function Details() {
   }
 
   if (!data) {
-    return <p>Data not found</p>
+    return <Error />
   }
 
   return (

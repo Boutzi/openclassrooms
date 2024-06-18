@@ -13,10 +13,16 @@
                 font-size: $font-size-l;
                 font-weight: $font-weight-medium;
                 font-family: $font-primary;
+                @media (max-width: 1240px) {
+                    font-size: $font-size-s;
+                }
             }
             .active {
                 text-decoration: underline;
             }
+        }
+        @media (max-width: 1240px) {
+            gap: 20px;
         }
     }
 }

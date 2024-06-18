@@ -3,15 +3,23 @@
 .title {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
     &__main {
         font-size: $font-size-xxl;
         color: $color-primary;
         line-height: $spacing-xl;
+        @media (max-width: 769px) {
+            font-size: $font-size-l;
+        }
     }
     &__subtitle {
         font-size: $font-size-m;
         font-weight: $font-weight-medium;
         line-height: $spacing-xl;
+        @media (max-width: 769px) {
+            font-size: $font-size-s;
+        }
+    }
+    @media (max-width: 769px) {
+        margin-top: 0px;
     }
 }

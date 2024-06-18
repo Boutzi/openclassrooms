@@ -1,12 +1,12 @@
 @use "../utils/" as *;
 
 .footer {
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-primary;
   display: flex;
-  bottom: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  bottom: 0;
   background: $color-canvas-inverted;
   height: 209px;
   width: 100%;
