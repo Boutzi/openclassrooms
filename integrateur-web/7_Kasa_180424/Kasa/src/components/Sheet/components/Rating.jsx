@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { useMemo } from "react"
-import inactiveStar from "../../assets/icons/star-inactive.svg"
-import activeStar from "../../assets/icons/star-active.svg"
+import inactiveStar from "../../../assets/icons/star-inactive.svg"
+import activeStar from "../../../assets/icons/star-active.svg"
 
 function Rating({ stars }) {
   const starRating = useMemo(() => Math.min(Math.max(stars, 1), 5), [stars])

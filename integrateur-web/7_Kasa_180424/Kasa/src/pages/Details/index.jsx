@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import PropTypes from "prop-types"
-import Carrousel from "../../components/Sheet/Carrousel"
+import Carrousel from "../../components/Sheet/components/Carrousel"
 import Sheet from "../../components/Sheet/Sheet"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"

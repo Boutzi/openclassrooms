@@ -22,22 +22,26 @@ function Carrousel({ pictures }) {
         src={pictures[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
       />
+      {totalPictures != 1 ?
       <img
         className="carrousel__arrow left"
         src="/src/assets/icons/arrow-left.svg"
         alt="Carrousel Arrow left"
         onClick={handlePrev}
-      />
+      /> : ""}
+      {totalPictures != 1 ?
       <img
         className="carrousel__arrow right"
         src="/src/assets/icons/arrow-right.svg"
         alt="Carrousel Arrow right"
         onClick={handleNext}
-      />
+      /> : ""}
+      {totalPictures != 1 ?
       <p className="carrousel__counter">
         <span className="active-view">{currentIndex + 1}</span>/
         <span className="total-view">{totalPictures}</span>
-      </p>
+      </p> : ""}
+        
     </div>
   );
 }

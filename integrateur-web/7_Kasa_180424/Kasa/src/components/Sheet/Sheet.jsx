@@ -1,9 +1,9 @@
 // import { Link } from 'react-router-dom';
 import PropTypes from "prop-types"
-import Title from "../../components/Sheet/Title"
-import Host from "../../components/Sheet/Host"
-import Tags from "../../components/Sheet/Tags"
-import Rating from "../../components/Sheet/Rating"
+import Title from "./components/Title"
+import Host from "./components/Host"
+import Tags from "./components/Tags"
+import Rating from "./components/Rating"
 import { Collapse } from "../Collapse/Collapse"
 
 function Sheet({
