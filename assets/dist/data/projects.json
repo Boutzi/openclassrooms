@@ -45,7 +45,7 @@
     "picture": "assets/images/p6.png",
     "technology": ["powershell", "npm", "swagger", "postman"],
     "subtitle": "Créez une page web dynamique avec JavaScript",
-    "success": false
+    "success": true
   },
   {
     "id": 7,
@@ -53,6 +53,14 @@
     "picture": "assets/images/p7.png",
     "technology": ["react", "vite"],
     "subtitle": "Créez une application web de location immobilière avec React",
+    "success": true
+  },
+  {
+    "id": 8,
+    "repository": "#",
+    "picture": "assets/images/p7.png",
+    "technology": [],
+    "subtitle": "Optimisez le référencement d'un site de photographe",
     "success": false
   }
 ]
