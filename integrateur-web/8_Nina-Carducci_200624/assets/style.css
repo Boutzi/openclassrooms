@@ -89,10 +89,6 @@ body {
 	width: 80%;
 	font-size: 14px;
 }
-
-#gallery {
-	/*	min-height: 100vh; */
-}
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -102,7 +98,7 @@ body {
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #7D752E;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
@@ -144,6 +140,7 @@ body {
 	padding-block: 3em;
 }
 .quote__text {
+	font-size: 2.5rem;
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
@@ -256,6 +253,7 @@ input[type="submit"] {
 		margin-bottom: 1em;
 	}
 	#about-me h6, #about-me p {
+		font-size: 1.1rem;
 		width: 100%;
 	}
 }
